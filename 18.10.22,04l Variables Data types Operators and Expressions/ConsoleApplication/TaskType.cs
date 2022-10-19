@@ -121,3 +121,18 @@ Console.WriteLine("Квадратный корень из 245: " + Math.Sqrt(245
 Console.WriteLine($"{Math.Max(10,Math.Max(0,Math.Max(130,Math.Max(19,Math.Max(5,Math.Max(4,2))))))}");
 Console.WriteLine($"{Math.Min(10,Math.Min(0,Math.Min(130,Math.Min(19,Math.Min(5,Math.Min(4,2))))))}");
 //______________________________________________________________________________________
+//10. Напишите программу, вычисляющую объём куба и площадь его полной
+//поверхности , по введённому значению длины ребра . Используйте формулы
+//V=a2,S=6∙a2
+//
+//P.S. Console.WriteLine(Math.Pow(Convert.ToDecimal(Console.ReadLine())),2); В чём ошибка? Можно решить через Math.Pow
+// --------------------------------
+
+decimal objcuba = Convert.ToDecimal(Console.ReadLine());
+Console.WriteLine($"{objcuba * objcuba}");
+Console.WriteLine($"{6*objcuba * objcuba}");
+//______________________________________________________________________________________
+
+//11.Напишите программу, в которой вычисляется сумма, разность и произведение
+// двух целых чисел, введенных с клавиатуры
+
