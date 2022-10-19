@@ -136,3 +136,10 @@ Console.WriteLine($"{6*objcuba * objcuba}");
 //11.Напишите программу, в которой вычисляется сумма, разность и произведение
 // двух целых чисел, введенных с клавиатуры
 
+int chislo1 = Convert.ToInt32(Console.ReadLine());
+int chislo2 = Convert.ToInt32(Console.ReadLine());
+
+Console.WriteLine($"{chislo1 + chislo2}");
+Console.WriteLine($"{chislo1 - chislo2}");
+Console.WriteLine($"{chislo1 * chislo2}");
+//______________________________________________________________________________________
