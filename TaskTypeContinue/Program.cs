@@ -191,3 +191,22 @@
 // string palecvyvod;
 // palecvyvod = (palecternary == 1) ? "Большой палец" : (palecternary == 2) ? "Указательный палец" : (palecternary == 3) ? "Средний палец" : (palecternary == 4) ? "Безымянный палец" : "Мизинец";
 // Console.WriteLine(palecvyvod);
+
+// 9. Необходимо написать программу, которая проверяет пользователя на знание
+// таблицы умножения. Пользователь сам вводит два целых однозначных числа.
+// Программа задаёт вопрос: результат умножения первого числа на
+// второе. Пользователь должен ввести ответ и увидеть на экране правильно он
+// ответил или нет. Если нет показать еще и правильный результат
+// int ymnoz = Convert.ToInt32(Console.ReadLine());
+// int ymnoz1 = Convert.ToInt32(Console.ReadLine());
+// int ymnoz2 = ymnoz * ymnoz1;
+// Console.Write("Введите результат умножения первого числа на второе: ");
+// int ymnoz3 = Convert.ToInt32(Console.ReadLine());
+// if (ymnoz2 == ymnoz3)
+// {
+//     Console.WriteLine("Верный ответ");
+// }
+// else
+// {
+//     Console.WriteLine($"Неверный ответ, верный ответ: {ymnoz2}");
+// }
