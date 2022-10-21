@@ -61,3 +61,9 @@
 //     Console.WriteLine($"{Math.Round(chislo1, 2)}");
 // }
 // // --------------------------------
+// int chisloternarny = Convert.ToInt32(Console.ReadLine());
+// double chislo1ternarny = Math.Sqrt(chisloternarny);
+// double chislo1ternarny1 = chislo1ternarny % 1;  
+// chislo1ternarny = chislo1ternarny1 == 0 ? chislo1ternarny : Math.Round(chislo1ternarny, 2);
+
+// Console.WriteLine($"{chislo1ternarny}");
