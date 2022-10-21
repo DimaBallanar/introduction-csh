@@ -1,44 +1,25 @@
-﻿int consoleNumber = Convert.ToInt32(Console.ReadLine());
-string message;
+﻿// 1.
+// Вы вводите значение с клавиатуры. Если значение равно 0, то вывести ‘Ноль’,
+// если < 0, то вывести ‘Отрицательное’, если > 0, то вывести ‘Положительное’
+// // --------------------------------
+// int flower = Convert.ToInt32(Console.ReadLine());
 
-if (consoleNumber < 0)
-{
-    message = "-";
-}
-else if (consoleNumber == 0)
-{
-    message = "0";
-}
-else
-{
-    message = "+";
-}
-
-
-message = consoleNumber < 0 ? "-" : consoleNumber == 0 ? "0" : "+";
-
-System.Console.WriteLine(message);
-
+// if (flower < 0)
+// {
+//     Console.WriteLine("Отрицательное");
+// }
+// else if (flower == 0)
+// {
+//     Console.WriteLine($"{flower}");
+// }
+// else
+// {
+//     Console.WriteLine("Положительное");
+// }
+// // --------------------------------
 
 
---------------------------
-var value = 5;
-
-string? message = null;
-
-if (value == 4)
-{
-    message = "Test";
-}
-
-System.Console.WriteLine(message ?? "Default Text")
----------------------------
-var value = 5;
-
-string? message = null;
-
-if (value == 4) {
-   message = "Test";
-}
-
-System.Console.WriteLine(message?.ToLower());
+int flower = Convert.ToInt32(Console.ReadLine());
+string vyvod;
+vyvod = (flower < 0 ) ? "Отрицательное" : (flower > 0 ) ? "Положительное" : "0";
+Console.WriteLine(vyvod);
