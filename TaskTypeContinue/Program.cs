@@ -67,3 +67,33 @@
 // chislo1ternarny = chislo1ternarny1 == 0 ? chislo1ternarny : Math.Round(chislo1ternarny, 2);
 
 // Console.WriteLine($"{chislo1ternarny}");
+
+//4. Пользователь вводит с клавиатуры 2 числа: a и b. Проверьте, что a делится без
+// остатка на b. Если это так выведите 'Делится' и результат деления, иначе
+// выведите 'Делится с остатком' и остаток от деления
+
+// double opi = Convert.ToDouble(Console.ReadLine());
+// double opi1 = Convert.ToDouble(Console.ReadLine());
+// double opi2 = opi % opi1;
+// double opi3 = opi / opi1;
+// if (opi2 == 0)
+// {
+// Console.WriteLine($"Делится, результат деления: {opi3}");
+// }
+// else
+// {
+//     Console.WriteLine($"Делится с остатком, остаток от деления: {opi2}");
+// }
+// // --------------------------------
+// Тут не знал как
+// double opiternarny = Convert.ToDouble(Console.ReadLine());
+// double opi1ternarny = Convert.ToDouble(Console.ReadLine());
+// double opi2ternarny = opiternarny % opi1ternarny;
+// double opi3ternarny = opiternarny / opi1ternarny;
+// double opi4ternarny;
+// opi4ternarny = opi2ternarny == 0 ? opi3ternarny : opi2ternarny;
+
+// Console.WriteLine($"{opi4ternarny}");
+
+// string opi6ternarny = Convert.ToString($"Делится с остатком, остаток от деления: {opi2ternarny}");
+// string opi5ternarny = Convert.ToString($"Делится, результат деления: {opi3ternarny}");
