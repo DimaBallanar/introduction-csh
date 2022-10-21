@@ -117,3 +117,37 @@
 // fiveternarny = fiveternarny1 == 0 ? fiveternarny : Math.Round(fiveternarny);
 // Console.WriteLine($"{fiveternarny}");
 // _____________________________________________
+
+// 6. Даны три числа a, b, c. Напишите программу, которая находит корни квадратного
+// уравнения
+// ax2+ bx + c = 0
+// Если
+// уравнение имеет два корня, то следует вывести их в порядке возрастания.
+
+// double a = Convert.ToDouble(Console.ReadLine());
+// double b = Convert.ToDouble(Console.ReadLine());
+// double c = Convert.ToDouble(Console.ReadLine());
+// double iks;
+// double iks1;
+// double iks2;
+// double iks3;
+// double d = Math.Pow(b, 2) - 4 * a * c;
+// Console.WriteLine($"{d}");
+// if (d > 0)
+// {
+//     iks = (-b - Math.Sqrt(d)) / 2 * a;
+//     iks1 = (-b + Math.Sqrt(d)) / 2 * a;
+//     iks2= Math.Max(iks,iks1);
+//     iks3= Math.Min(iks,iks1);
+//     Console.WriteLine($"{iks3},    {iks2}");
+// }
+// else if (d == 0)
+// {
+//     iks = (-b - Math.Sqrt(d)) / 2 * a;
+//     Console.WriteLine($"{iks}");
+// }
+// else
+// {
+//     Console.WriteLine("Разошлись мирно, корней - нет");
+// }
+
