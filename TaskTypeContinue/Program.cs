@@ -46,3 +46,18 @@
 // qwerty2 = qwerty2 % 2;
 // qwertyvyvod = qwerty2 == 0 ? true : false;
 // Console.WriteLine(qwertyvyvod);
+// _____________________________________________
+// 3. Пользователь вводит с клавиатуры число. Найдите корень введенного числа
+// (если же результат число с плавающей точкой, то округлить до 2 знаков после
+// запятой
+// int chislo = Convert.ToInt32(Console.ReadLine());
+// var chislo1 = Math.Sqrt(chislo);
+// if (chislo1 % 1 == 0)
+// {
+//     Console.WriteLine($"{chislo1}");
+// }
+// else
+// {
+//     Console.WriteLine($"{Math.Round(chislo1, 2)}");
+// }
+// // --------------------------------
