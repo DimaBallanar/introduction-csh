@@ -97,3 +97,23 @@
 
 // string opi6ternarny = Convert.ToString($"Делится с остатком, остаток от деления: {opi2ternarny}");
 // string opi5ternarny = Convert.ToString($"Делится, результат деления: {opi3ternarny}");
+
+// 5. Пользователь вводит с клавиатуры число. Найдите корень введенного числа
+// (если же результат число с плавающей точкой, то округлить то целых)
+// double five = Convert.ToDouble(Console.ReadLine());
+// five = Math.Sqrt(five);
+// if (five % 1 == 0)
+//  {
+//     Console.WriteLine($"{five}");
+// }
+// else
+// {
+//     Console.WriteLine($"{Math.Round(five)}");
+// }
+// // --------------------------------
+// double fiveternarny = Convert.ToDouble(Console.ReadLine());
+// fiveternarny = Math.Sqrt(fiveternarny);
+// double fiveternarny1 = fiveternarny % 1;
+// fiveternarny = fiveternarny1 == 0 ? fiveternarny : Math.Round(fiveternarny);
+// Console.WriteLine($"{fiveternarny}");
+// _____________________________________________
