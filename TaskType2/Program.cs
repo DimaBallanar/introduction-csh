@@ -46,3 +46,64 @@ string result = chet switch
 };
 System.Console.WriteLine(result);
 //_______________________________________________________________
+
+// 3.
+// Пользователь вводит число от 1 до 7, соответствующее дню недели. Необходимо
+// вывести день для введенного числа.
+// 1 --> Понедельник
+
+int dennedelya = Convert.ToInt32(Console.ReadLine());
+if (dennedelya == 1)
+{
+Console.WriteLine ($"{dennedelya} --> Понедельник");
+}
+else if (dennedelya == 2)
+{
+Console.WriteLine ($"{dennedelya} --> Вторник");
+}
+else if (dennedelya == 3)
+{
+Console.WriteLine ($"{dennedelya} --> Среда");
+}
+else if (dennedelya == 4)
+{
+Console.WriteLine ($"{dennedelya} --> Четверг");
+}
+else if (dennedelya == 5)
+{
+Console.WriteLine ($"{dennedelya} --> Пятница");
+}
+else if (dennedelya == 6)
+{
+Console.WriteLine ($"{dennedelya} --> Суббота");
+}
+else if (dennedelya == 7)
+{
+Console.WriteLine ($"{dennedelya} --> Воскресенье");
+}
+//---------------------------- 
+int dennedelya1 = Convert.ToInt32(Console.ReadLine());
+switch (dennedelya1)
+{
+    case 1:
+        System.Console.WriteLine($"{dennedelya1} -->Понедельник");
+        break;
+    case 2:
+        System.Console.WriteLine($"{dennedelya1} -->Вторник");
+        break;
+    case 3:
+        System.Console.WriteLine($"{dennedelya1} -->Среда");
+        break;
+    case 4:
+        System.Console.WriteLine($"{dennedelya1} -->Четверг");
+        break;
+    case 5:
+        System.Console.WriteLine($"{dennedelya1} -->Пятница");
+        break;
+    case 6:
+        System.Console.WriteLine($"{dennedelya1} --> Суббота");
+        break;
+    case 7:
+        System.Console.WriteLine($"{dennedelya1} --> Воскресенье");
+        break;
+}
