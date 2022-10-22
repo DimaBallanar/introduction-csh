@@ -23,3 +23,26 @@ int chis4 = Math.Max(chis2, chis3);
 Console.WriteLine($"{chis4}");
 
 //_______________________________________________________________
+// 2. Выявить является ли введенное число четным
+//-------------------------------------------------
+int chet = Convert.ToInt32(Console.ReadLine());
+switch (chet)
+{
+    case >= 0 when chet % 2 == 0:
+        System.Console.WriteLine("Число чётное");
+        break;
+    case > 0 when chet % 2 != 0:
+        System.Console.WriteLine("Число нечётное");
+        break;
+}
+//----------------------------
+int chet1 = Convert.ToInt32(Console.ReadLine());
+string result = chet switch 
+{
+    >= 0 when chet1 % 2 == 0 => "Число чётное",
+    > 0 when chet1 % 2 != 0 => "Число нечётное",
+    < 0  when chet1 % 2 == 0 => "Число чётное",
+    < 0 when chet1 % 2 != 0 => "Число нечётное",
+};
+System.Console.WriteLine(result);
+//_______________________________________________________________
