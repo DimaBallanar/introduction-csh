@@ -178,3 +178,23 @@ string itog = nachislo1 switch
     0 => "Число " + nachislo1 + " однозначное Ноль))))." + $" Его длинна: {schetkolich3}"
 };
 System.Console.WriteLine(itog);
+//_______________________________________________________________
+
+// 6. Найти квадратный корень числа. Если же число без плавающей точки, то просто
+// вывести его. В противном случае необходимо округлить число до целых.
+// Добавить проверку на ввод только чисел
+var schetkvkoren = Console.ReadLine();
+int schetkvkoren2 = Convert.ToInt32(schetkvkoren);
+string schetkvkoren3 = Convert.ToString(Math.Sqrt(schetkvkoren2));
+int qw;
+bool know = int.TryParse(schetkvkoren3, out qw);
+switch (know)
+{
+    case true:
+        System.Console.WriteLine(schetkvkoren3);
+        break;
+    case false:
+        System.Console.WriteLine(Math.Round(Math.Sqrt(schetkvkoren2),2));
+        break;
+}
+//_______________________________________________________________
