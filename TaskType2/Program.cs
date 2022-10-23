@@ -132,3 +132,15 @@ var result1 = proverka1 switch
     false => "false Char.IsDigit (str2, position)- Это строка"
 };
 System.Console.WriteLine(result1);
+//------------------------
+var str4 = Console.ReadLine();
+bool proverka2 = Char.IsDigit(str4, 0);
+switch (proverka2)
+{
+    case true:
+        System.Console.WriteLine($"{str4} Это число");
+        break;
+    case false:
+        System.Console.WriteLine("false Char.IsDigit (str4, 0 position)- Это строка");
+        break;
+}
