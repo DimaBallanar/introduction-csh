@@ -166,3 +166,15 @@ switch (nachislo)
         System.Console.WriteLine("Число " + nachislo + " однозначное Ноль))))." + $" Его длинна: {schetkolich1}");
         break;
 }
+//------------------------------------------------------------------------
+var schetkolich2 = Console.ReadLine();
+int schetkolich3 = schetkolich2.Length;
+int nachislo1;
+bool proverka52 = int.TryParse(schetkolich2, out nachislo1);
+string itog = nachislo1 switch 
+{
+    > 0 => "Число " + nachislo1 + " однозначное положительное." + $" Его длинна: {schetkolich3}",
+   < 0 => "Число " + nachislo1 + " однозначное отрицательное." + $" Его длинна: {schetkolich3-1}",
+    0 => "Число " + nachislo1 + " однозначное Ноль))))." + $" Его длинна: {schetkolich3}"
+};
+System.Console.WriteLine(itog);
