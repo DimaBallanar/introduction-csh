@@ -197,4 +197,16 @@ switch (know)
         System.Console.WriteLine(Math.Round(Math.Sqrt(schetkvkoren2),2));
         break;
 }
-//_______________________________________________________________
+//------------------------------------------------------------------------
+var schetkvkoren4 = Console.ReadLine();
+int schetkvkoren5 = Convert.ToInt32(schetkvkoren4);
+string schetkvkoren6 = Convert.ToString(Math.Sqrt(schetkvkoren5));
+int qw1;
+bool know1 = int.TryParse(schetkvkoren6, out qw1);
+string itogovy = know1 switch
+{
+    true => schetkvkoren6,
+    false => Convert.ToString(Math.Round(Math.Sqrt(schetkvkoren5),2))
+};
+System.Console.WriteLine(itogovy);
+//______________________________________________________________________________________________________________________________
