@@ -107,7 +107,7 @@ switch (dennedelya1)
         System.Console.WriteLine($"{dennedelya1} --> Воскресенье");
         break;
 }
-
+//_______________________________________________________________
 //4. Есть строка в 3 символа. Написать проверку если число, вывести true, в
 // противном случае false Char.IsDigit (str2, position))
 var str = Console.ReadLine();
@@ -142,5 +142,27 @@ switch (proverka2)
         break;
     case false:
         System.Console.WriteLine("false Char.IsDigit (str4, 0 position)- Это строка");
+        break;
+}
+//_______________________________________________________________
+
+// 5. Пользователь вводит число с клавиатуры. Нужно вывести на экран сколько в этом
+// числе цифр, а также положительное оно или отрицательное. Например, 
+// "Число " + num + " однозначное положительное". (Length)
+
+var schetkolich = Console.ReadLine();
+int schetkolich1 = schetkolich.Length;
+int nachislo;
+bool proverka51 = int.TryParse(schetkolich, out nachislo);
+switch (nachislo)
+{
+    case (> 0):
+        System.Console.WriteLine("Число " + nachislo + " однозначное положительное." + $" Его длинна: {schetkolich1}");
+        break;
+    case (< 0):
+        System.Console.WriteLine("Число " + nachislo + " однозначное отрицательное." + $" Его длинна: {schetkolich1}");
+        break;
+    case 0:
+        System.Console.WriteLine("Число " + nachislo + " однозначное Ноль))))." + $" Его длинна: {schetkolich1}");
         break;
 }
