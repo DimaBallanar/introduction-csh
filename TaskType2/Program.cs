@@ -238,14 +238,6 @@ if (!int.TryParse(text22, out _)) // "_"- игнорируем объявлен�
 {
     string result = !string.IsNullOrEmpty(text22) ?  $"Длинна строки {text22.Length} " : "Пустота";
     Console.WriteLine(result);
-    // if (!string.IsNullOrEmpty(text22)) //(text != null) "" // string.IsNullOrEmpty(text)) - проверяет на налл и пустое значение
-    // {
-    //     Console.WriteLine($"Длинна строки {text22.Length} ");
-    // }
-    // else
-    // {
-    //     Console.WriteLine("Пустота");
-    // }
 }
 else
 {
