@@ -209,10 +209,50 @@ string itogovy = know1 switch
     false => Convert.ToString(Math.Round(Math.Sqrt(schetkvkoren5),2))
 };
 System.Console.WriteLine(itogovy);
-//______________________________________________________________________________________________________________________________
-// 15.
-// Пользователь вводит строку. Необходимо сделать проверку, что это не число и
-// вывести длину строки
+// 7. Два автомобиля едут друг к другу с постоянными скоростями V1 и V2 км/ч.
+// Определите, через какое время автомобили встретятся , если расстояние между
+// ними равно S км. Добавить проверку на ввод только чисел
+
+string skorost = Console.ReadLine();
+double skorostproverka;
+bool truefalsechislo = double.TryParse(skorost, out skorostproverka);
+string skorost1 = Console.ReadLine();
+double skorostproverka1;
+bool truefalsechislo1 = double.TryParse(skorost1, out skorostproverka1);
+string rastoynie = Console.ReadLine();
+double rastoynieproverka1;
+bool truefalsechislo2 = double.TryParse(rastoynie, out rastoynieproverka1);
+switch (truefalsechislo)
+{
+    case true:
+        switch (truefalsechislo1)
+        {
+            case true:
+                switch (truefalsechislo2)
+                {
+                    case true:
+
+                        System.Console.WriteLine(rastoynieproverka1 / (skorostproverka1 + skorostproverka));
+                        break;
+                    case false:
+                        System.Console.WriteLine("Расстояние - не число");
+                        break;
+                }
+                break;
+            case false:
+                System.Console.WriteLine("Скорость 2 - не число");
+                break;
+        }
+        break;
+    case false:
+        System.Console.WriteLine("Скорость 1 - не число");
+        break;
+}
+
+// //______________________________________________________________________________________________________________________________
+// // 15.
+// // Пользователь вводит строку. Необходимо сделать проверку, что это не число и
+// // вывести длину строки
 
 Console.WriteLine("Введите строку ");
 string? text22 = Console.ReadLine();
@@ -233,13 +273,16 @@ else
 }
 //------------------------------------------------------------------------
 Console.WriteLine("Введите строку ");
-string? text22 = Console.ReadLine();
-if (!int.TryParse(text22, out _)) // "_"- игнорируем объявление переменной
+string? text23 = Console.ReadLine();
+if (!int.TryParse(text23, out _)) // "_"- игнорируем объявление переменной
 {
-    string result = !string.IsNullOrEmpty(text22) ?  $"Длинна строки {text22.Length} " : "Пустота";
-    Console.WriteLine(result);
+    string result234 = !string.IsNullOrEmpty(text23) ?  $"Длинна строки {text23.Length} " : "Пустота";
+    Console.WriteLine(result234);
 }
 else
 {
     Console.WriteLine("ввели число");
 }
+//______________________________________________________________________________________________________________________________
+
+
