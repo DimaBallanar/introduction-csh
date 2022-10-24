@@ -210,3 +210,44 @@ string itogovy = know1 switch
 };
 System.Console.WriteLine(itogovy);
 //______________________________________________________________________________________________________________________________
+// 15.
+// Пользователь вводит строку. Необходимо сделать проверку, что это не число и
+// вывести длину строки
+
+Console.WriteLine("Введите строку ");
+string? text22 = Console.ReadLine();
+if (!int.TryParse(text22, out _)) // "_"- игнорируем объявление переменной
+{
+    if (!string.IsNullOrEmpty(text22)) //(text != null) "" // string.IsNullOrEmpty(text)) - проверяет на налл и пустое значение
+    {
+        Console.WriteLine($"Длинна строки {text22.Length} ");
+    }
+    else
+    {
+        Console.WriteLine("Пустота");
+    }
+}
+else
+{
+    Console.WriteLine("ввели число");
+}
+//------------------------------------------------------------------------
+Console.WriteLine("Введите строку ");
+string? text22 = Console.ReadLine();
+if (!int.TryParse(text22, out _)) // "_"- игнорируем объявление переменной
+{
+    string result = !string.IsNullOrEmpty(text22) ?  $"Длинна строки {text22.Length} " : "Пустота";
+    Console.WriteLine(result);
+    // if (!string.IsNullOrEmpty(text22)) //(text != null) "" // string.IsNullOrEmpty(text)) - проверяет на налл и пустое значение
+    // {
+    //     Console.WriteLine($"Длинна строки {text22.Length} ");
+    // }
+    // else
+    // {
+    //     Console.WriteLine("Пустота");
+    // }
+}
+else
+{
+    Console.WriteLine("ввели число");
+}
