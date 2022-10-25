@@ -62,6 +62,23 @@ number = number % number2;
 // 5. Ввести число и увеличить его на 1 всеми доступными способами
 // 6. Ввести строку, если строка число найти остаток от деления на 5, в противном случае вывести сообщение, что введено не число
 // 7. Ввести две строки, если строки числа вывести их сумму, в противном случае вывести сообщение какие строки не являются числом
+Console.WriteLine("Задача 7");
+string? chislo1 = Console.ReadLine();
+string? chislo2 = Console.ReadLine();
+int outnumber;
+int outnumber1;
+if (int.TryParse(chislo1, out outnumber) && int.TryParse(chislo2, out outnumber1))
+{
+    Console.WriteLine(chislo1+chislo2);
+}
+else if (int.TryParse(chislo1, out outnumber))
+{
+    Console.WriteLine("chislo1 - не число");
+}
+else if (int.TryParse(chislo2, out outnumber1))
+{
+    Console.WriteLine("chislo2 - не число");
+}
 // 8. Ввести два числа, если 1 число больше 2, то произвести деление 1 на 2, если 2 больше 1 вывести
 // разность между 2 и 1, в противном случае вернуть 0.0 и результат увеличить на 10 (if-else, тернаный оператор)
 Console.WriteLine("Задача 8");
