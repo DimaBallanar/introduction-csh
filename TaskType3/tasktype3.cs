@@ -26,9 +26,21 @@ peremenya4=true;
 Console.WriteLine(peremenya4);
 peremenya4 ^= peremenya4;
 Console.WriteLine(peremenya4);
-
+// -------------
+int peremenya10=5; 
+peremenya10++;
+++peremenya10;
+peremenya10 = peremenya10 +1;
+Console.WriteLine(peremenya10);
 
 // 2. Произвести все все комбинации неявного преобразования (byte, int, long, float, double, decemel)
+byte peremenya5 = 1;
+int peremenya6 = peremenya5;
+long peremenya7 = peremenya6;
+float peremenya8 = peremenya7;
+double peremenya9 = peremenya8;
+
+
 // 3. Произвести все все комбинации явного преобразования (byte, int, long, float, double, decemel)
 // 4. Ввести два числа, произвести арифметические над числами и записать результат в первое число (+, -, /, *, %)
 // 5. Ввести число и увеличить его на 1 всеми доступными способами
