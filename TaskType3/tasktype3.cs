@@ -49,7 +49,13 @@ float peremenya14 = (float)peremenya13;
 double peremenya15 = (double)peremenya14;
 decimal peremenya16 = (decimal)peremenya15;
 // 4. Ввести два числа, произвести арифметические над числами и записать результат в первое число (+, -, /, *, %)
-
+int number = Convert.ToInt32(Console.ReadLine());
+int number2 = Convert.ToInt32(Console.ReadLine());
+number = number + number2;
+number = number - number2;
+number = number / number2;
+number = number * number2;
+number = number % number2;
 // 5. Ввести число и увеличить его на 1 всеми доступными способами
 // 6. Ввести строку, если строка число найти остаток от деления на 5, в противном случае вывести сообщение, что введено не число
 // 7. Ввести две строки, если строки числа вывести их сумму, в противном случае вывести сообщение какие строки не являются числом
