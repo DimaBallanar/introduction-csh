@@ -1,20 +1,20 @@
 ﻿// 1. Объявить оперменные и поменять в их значения три раза (string, int, bool, double)
 
-double peremenya; 
+double peremenya;
 double peremenya1;
 peremenya1 = 4.0;
 peremenya = 2.0;
 peremenya = 3.0;
-peremenya+= 2.0;
-peremenya = peremenya1 +peremenya;
-peremenya=-peremenya;
+peremenya += 2.0;
+peremenya = peremenya1 + peremenya;
+peremenya = -peremenya;
 // -------------
 string peremenya2;
 string peremenya3;
 peremenya3 = "tr";
 peremenya2 = "rt";
 peremenya2 = peremenya2 + peremenya3;
-peremenya2+=peremenya3;
+peremenya2 += peremenya3;
 Console.WriteLine(peremenya2);
 Console.WriteLine("конкатенация+: " + peremenya2 + peremenya3);
 // -------------
@@ -22,15 +22,15 @@ bool peremenya4;
 peremenya4 = true;
 peremenya4 = !true;
 Console.WriteLine(peremenya4);
-peremenya4=true;
+peremenya4 = true;
 Console.WriteLine(peremenya4);
 peremenya4 ^= peremenya4;
 Console.WriteLine(peremenya4);
 // -------------
-int peremenya10=5; 
+int peremenya10 = 5;
 peremenya10++;
 ++peremenya10;
-peremenya10 = peremenya10 +1;
+peremenya10 = peremenya10 + 1;
 Console.WriteLine(peremenya10);
 
 // 2. Произвести все все комбинации неявного преобразования (byte, int, long, float, double, decemel)
@@ -42,7 +42,14 @@ double peremenya9 = peremenya8;
 
 
 // 3. Произвести все все комбинации явного преобразования (byte, int, long, float, double, decemel)
+byte peremenya11 = 1;
+int peremenya12 = (int)peremenya11;
+long peremenya13 = (long)peremenya12;
+float peremenya14 = (float)peremenya13;
+double peremenya15 = (double)peremenya14;
+decimal peremenya16 = (decimal)peremenya15;
 // 4. Ввести два числа, произвести арифметические над числами и записать результат в первое число (+, -, /, *, %)
+
 // 5. Ввести число и увеличить его на 1 всеми доступными способами
 // 6. Ввести строку, если строка число найти остаток от деления на 5, в противном случае вывести сообщение, что введено не число
 // 7. Ввести две строки, если строки числа вывести их сумму, в противном случае вывести сообщение какие строки не являются числом
