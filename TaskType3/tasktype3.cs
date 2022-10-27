@@ -145,62 +145,96 @@
 // Console.WriteLine($"{linestroka1}"+"grb");
 // // 11. Ввести строку до 5 символов, если строка число то вывести для кажкой цифры в числе кратно 
 // // оно двум либо нет, то есть 6352 => 6 крастно двум, 3 не кратно двум, 5  не кратно двум, 2 
-// // крастно двум (if-else, тернаный оператор)
-Console.WriteLine("Задача 11");
-string? yu = Console.ReadLine();
-string chifra1 = "";
-string chifra2 = "";
-string chifra3 = "";
-string chifra4 = "";
-if (yu.Length < 5)
-{
-    if (int.TryParse(yu, out int strokachislo))
-    {
-        if (((Convert.ToInt32(yu[0]) % 2) != 0))
-        {
-            chifra1 = ($"{yu[0]}, некратно двум");
-        }
-        else if ((yu[1] % 2 != 0))
-        {
-            chifra2 = ($"{yu[1]}, некратно двум");
-        }
-        else if ((yu[2] % 2 != 0))
-        {
-            chifra3 = ($"{yu[2]}, некратно двум");
-        }
-        else if ((yu[3] % 2 != 0))
-        {
-            chifra4 = ($"{yu[3]}, некратно двум");
-        }
-        else if ((yu[0] % 2 == 0))
-        {
-            chifra1 = ($"{yu[0]}, кратно двум");
-        }
-        else if ((yu[1] % 2 == 0))
-        {
-            chifra2 = ($"{yu[1]}, кратно двум");
-        }
-        else if ((yu[2] % 2 == 0))
-        {
-            chifra3 = ($"{yu[2]}, кратно двум");
-        }
-        else if ((yu[3] % 2 == 0))
-        {
-            chifra4 = ($"{yu[3]}, кратно двум");
-        }
-    }
-    // (yu[0] % 2 == 0 && yu[1] % 2 == 0 && yu[2] % 2 == 0 && yu[3] % 2 == 0) { Console.WriteLine($"{yu[0]} кратно 2, {yu[1]} кратно 2, {yu[2]} кратно 2, {yu[3]} кратно 2");
-    // Console.WriteLine($"{yu[0]}+{yu[1]}");
-    else { Console.WriteLine("Нужно ввести число"); }
-}
-else { Console.WriteLine("Нужно ввести строку до 5 символов"); }
-Console.WriteLine($"{chifra1},{chifra2},{chifra3},{chifra4}");
-Console.WriteLine($"{chifra1}");
-Console.WriteLine($"{chifra2}");
-Console.WriteLine($"{chifra3}");
-Console.WriteLine($"{chifra4}");
+// // // крастно двум (if-else, тернаный оператор)
+// Console.WriteLine("Задача 11");
+// string? yu = Console.ReadLine();
+// string chifra1 = "";
+// string chifra2 = "";
+// string chifra3 = "";
+// string chifra4 = "";
+// if (yu.Length < 5)
+// {
+//     if (int.TryParse(yu, out int strokachislo))
+//     {
+//         if (((Convert.ToInt32(yu[0]) % 2) != 0))
+//         {
+//             chifra1 = ($"{yu[0]}, некратно двум");
+//         }
+//         else if ((yu[1] % 2 != 0))
+//         {
+//             chifra2 = ($"{yu[1]}, некратно двум");
+//         }
+//         else if ((yu[2] % 2 != 0))
+//         {
+//             chifra3 = ($"{yu[2]}, некратно двум");
+//         }
+//         else if ((yu[3] % 2 != 0))
+//         {
+//             chifra4 = ($"{yu[3]}, некратно двум");
+//         }
+//         else if ((yu[0] % 2 == 0))
+//         {
+//             chifra1 = ($"{yu[0]}, кратно двум");
+//         }
+//         else if ((yu[1] % 2 == 0))
+//         {
+//             chifra2 = ($"{yu[1]}, кратно двум");
+//         }
+//         else if ((yu[2] % 2 == 0))
+//         {
+//             chifra3 = ($"{yu[2]}, кратно двум");
+//         }
+//         else if ((yu[3] % 2 == 0))
+//         {
+//             chifra4 = ($"{yu[3]}, кратно двум");
+//         }
+//     }
+//     // (yu[0] % 2 == 0 && yu[1] % 2 == 0 && yu[2] % 2 == 0 && yu[3] % 2 == 0) { Console.WriteLine($"{yu[0]} кратно 2, {yu[1]} кратно 2, {yu[2]} кратно 2, {yu[3]} кратно 2");
+//     // Console.WriteLine($"{yu[0]}+{yu[1]}");
+//     else { Console.WriteLine("Нужно ввести число"); }
+// }
+// else { Console.WriteLine("Нужно ввести строку до 5 символов"); }
+// Console.WriteLine($"{chifra1},{chifra2},{chifra3},{chifra4}");
+// Console.WriteLine($"{chifra1}");
+// Console.WriteLine($"{chifra2}");
+// Console.WriteLine($"{chifra3}");
+// Console.WriteLine($"{chifra4}");
 // int iu = Convert.ToInt32(yu[0]) % 2;
 // Console.WriteLine(iu);
+
+int er = Convert.ToInt32(Console.ReadLine());
+int er2 = (er -1000)/100;
+
+Console.WriteLine(er);
+1234/1000=1
+(1234-1000)/100=
+int number = 7521;
+// string result = $"{number} - ";
+// int number1 = number / 1000;
+
+// if (number1 == 1)
+// {
+//     result += "Одна тысяча ";
+// }
+// else if (number1 == 2)
+// {
+//     Console.WriteLine("Две тысячи");
+// }
+// else if (number1 == 7)
+// {
+//     Console.WriteLine("Семь тысяч");
+// }
+// // конец тысяч
+// number = number % 1000;
+// int sotnya1 = sotnya / 100;
+// if (sotnya1 == 1)
+// {
+//     Console.WriteLine("Сто");
+// }
+// else if (sotnya1 == 5)
+// {
+//     result += "Пятьсот ";
+// }
 
 // // 12. Ввести две строки, произвести проврку на пустоту, если строки имеют символы то если первая строка больше
 // //  второй вывести сумму длин строк, в противном случае разность 2 от первой 
