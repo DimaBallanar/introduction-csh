@@ -290,6 +290,25 @@ switch (numbermounths1, numbermounths1, numbermounths1)
         break;
 }
 
+//9 Пользователь вводит число: 1, 2, 3 или 4. Если это значение ‘2', то вывести в
+// // консоль 'зима близко', ‘3' зима, ‘4' всё' . Решите задачу через switch case .
+int zimablizko = Convert.ToInt32(Console.ReadLine());
+switch (zimablizko)
+{
+    case (1):
+        System.Console.WriteLine("");
+        break;
+    case (2):
+        System.Console.WriteLine("зима близко");
+        break;
+    case (3):
+        System.Console.WriteLine("зима");
+        break;
+    case (4):
+        System.Console.WriteLine("всё");
+        break;
+}
+
 // 14.Пользователь вводит 2 числа от 0 до 10. Сложите переменные так, чтобы в
 // результате получилось выражение: “I’m хх". Проверки на ввод только чисел.
 // Проверки на ввод чисел до 10. Если первое число 0, то опустить его
