@@ -146,12 +146,121 @@
 // // 11. Ввести строку до 5 символов, если строка число то вывести для кажкой цифры в числе кратно 
 // // оно двум либо нет, то есть 6352 => 6 крастно двум, 3 не кратно двум, 5  не кратно двум, 2 
 // // // крастно двум (if-else, тернаный оператор)
-// Console.WriteLine("Задача 11");
-// string? yu = Console.ReadLine();
-// string chifra1 = "";
-// string chifra2 = "";
-// string chifra3 = "";
-// string chifra4 = "";
+
+
+Console.WriteLine("Задача 11");
+string? yu = Console.ReadLine();
+
+if (yu.Length < 5 && int.TryParse(yu, out int strokachislo) && !(yu == null) && strokachislo > 999)
+
+{
+    int tysach = strokachislo / 1000;
+    int sotnya = strokachislo / 100 - tysach * 10;
+    int desytok = strokachislo / 10 - tysach * 100 - sotnya * 10;
+    int edinicy = strokachislo / 1 - tysach * 1000 - sotnya * 100 - desytok * 10;
+    if (tysach % 2 == 0)
+    {
+        Console.WriteLine($"{tysach}-кратно двум");
+    }
+    if (tysach % 2 != 0)
+    {
+        Console.WriteLine($"{tysach}-не кратно двум");
+    }
+    if (sotnya % 2 == 0)
+    {
+        Console.WriteLine($"{sotnya}-кратно двум");
+    }
+    if (sotnya % 2 != 0)
+    {
+        Console.WriteLine($"{sotnya}-не кратно двум");
+    }
+    if (desytok % 2 == 0)
+    {
+        Console.WriteLine($"{desytok}-кратно двум");
+    }
+    if (desytok % 2 != 0)
+    {
+        Console.WriteLine($"{desytok}-не кратно двум");
+    }
+    if (edinicy % 2 == 0)
+    {
+        Console.WriteLine($"{edinicy}- кратно двум");
+    }
+    if (edinicy % 2 != 0)
+    {
+        Console.WriteLine($"{edinicy}-не кратно двум");
+    }
+}
+else if (yu.Length < 5 && int.TryParse(yu, out strokachislo) && !(yu == null) && strokachislo > 99)
+{
+    int sotnya = strokachislo / 100;
+    int desytok = strokachislo / 10 - sotnya * 10;
+    int edinicy = strokachislo / 1 - sotnya * 100 - desytok * 10;
+    if (sotnya % 2 == 0)
+    {
+        Console.WriteLine($"{sotnya}-кратно двум");
+    }
+    if (sotnya % 2 != 0)
+    {
+        Console.WriteLine($"{sotnya}-не кратно двум");
+    }
+    if (desytok % 2 == 0)
+    {
+        Console.WriteLine($"{desytok}-кратно двум");
+    }
+    if (desytok % 2 != 0)
+    {
+        Console.WriteLine($"{desytok}-не кратно двум");
+    }
+    if (edinicy % 2 == 0)
+    {
+        Console.WriteLine($"{edinicy}- кратно двум");
+    }
+    if (edinicy % 2 != 0)
+    {
+        Console.WriteLine($"{edinicy}-не кратно двум");
+    }
+}
+else if (yu.Length < 5 && int.TryParse(yu, out strokachislo) && !(yu == null) && strokachislo > 9)
+
+{
+    int desytok = strokachislo / 10;
+    int edinicy = strokachislo / 1 - desytok * 10;
+    if (desytok % 2 == 0)
+    {
+        Console.WriteLine($"{desytok}-кратно двум");
+    }
+    if (desytok % 2 != 0)
+    {
+        Console.WriteLine($"{desytok}-не кратно двум");
+    }
+    if (edinicy % 2 == 0)
+    {
+        Console.WriteLine($"{edinicy}- кратно двум");
+    }
+    if (edinicy % 2 != 0)
+    {
+        Console.WriteLine($"{edinicy}-не кратно двум");
+    }
+}
+else if (yu.Length < 5 && int.TryParse(yu, out strokachislo) && !(yu == null) && strokachislo >= 0)
+
+{
+    int edinicy = strokachislo / 1;
+    if (edinicy % 2 == 0)
+    {
+        Console.WriteLine($"{edinicy}- кратно двум");
+    }
+    if (edinicy % 2 != 0)
+    {
+        Console.WriteLine($"{edinicy}-не кратно двум");
+    }
+}
+else if (yu.Length > 5 && int.TryParse(yu, out strokachislo)==true )
+{ Console.WriteLine("Вы ввели число больше 9999, введите меньше"); }
+else { Console.WriteLine("Вы ввели не число"); }
+//-----------------------------------------------------------
+// вариант 2 (не до конца доведённый)
 // if (yu.Length < 5)
 // {
 //     if (int.TryParse(yu, out int strokachislo))
@@ -201,39 +310,32 @@
 // Console.WriteLine($"{chifra4}");
 // int iu = Convert.ToInt32(yu[0]) % 2;
 // Console.WriteLine(iu);
+//-----------------------------------------------------------
+// вариант 3 (не до конца доведённый)
 
-int er = Convert.ToInt32(Console.ReadLine());
-int er2 = (er -1000)/100;
+// Console.WriteLine("Задача 11");
+// string? yu = Console.ReadLine();
+// string resulttysach = "";
+// string resultsotnya = "";
+// string desatki = "";
+// string chislo = "";
 
-Console.WriteLine(er);
-1234/1000=1
-(1234-1000)/100=
-int number = 7521;
-// string result = $"{number} - ";
-// int number1 = number / 1000;
+// if (yu.Length < 5 && int.TryParse(yu, out int strokachislo) && !(yu == null))
+// {
 
-// if (number1 == 1)
-// {
-//     result += "Одна тысяча ";
-// }
-// else if (number1 == 2)
-// {
-//     Console.WriteLine("Две тысячи");
-// }
-// else if (number1 == 7)
-// {
-//     Console.WriteLine("Семь тысяч");
-// }
-// // конец тысяч
-// number = number % 1000;
-// int sotnya1 = sotnya / 100;
-// if (sotnya1 == 1)
-// {
-//     Console.WriteLine("Сто");
-// }
-// else if (sotnya1 == 5)
-// {
-//     result += "Пятьсот ";
+//     int tysach = strokachislo / 1000;
+//     int sotnya = strokachislo / 100 - tysach * 10;
+//     int desytok = strokachislo / 10 - tysach * 100 - sotnya * 10;
+//     int edinicy = strokachislo / 1 - tysach * 1000 - sotnya * 100 - desytok * 10;
+//     if (strokachislo > 999)
+//     {
+//         { resulttysach = (strokachislo / 1000) % 2 == 0 ? "Кратно двум" : "не кратно двум"; }
+//     }
+//     if (strokachislo > 99)
+//     {
+//         { resultsotnya = ((strokachislo % 1000)/100)%2 == 0 ? "Кратно двум" : "не кратно двум"; }
+//     }
+//     Console.WriteLine($"{tysach}-{resulttysach},{sotnya}-{resultsotnya}");
 // }
 
 // // 12. Ввести две строки, произвести проврку на пустоту, если строки имеют символы то если первая строка больше
