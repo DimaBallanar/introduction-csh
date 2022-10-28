@@ -329,6 +329,20 @@ string? kolichestvometrov = Console.ReadLine();
 int.TryParse(kolichestvometrov, out int kolmetr);
 Console.WriteLine(kolmetr/100);
 
+// 12. Напишите программу, в которой рассчитывается сумма и произведение цифр
+// положительного трёхзначного числа
+// 123 --> Сумма цифр = 6 Произведение цифр = 6
+int trexpolchislo = Convert.ToInt32(Console.ReadLine());
+if (trexpolchislo > 0 && trexpolchislo > 99)
+{
+    int sotnya1 = trexpolchislo / 100;
+    int desytok1 = trexpolchislo / 10 - sotnya1 * 10;
+    int edinicy1 = trexpolchislo / 1 - sotnya1 * 100 - desytok1 * 10;
+
+    Console.WriteLine($"Сумма цифр-{sotnya1+desytok1+edinicy1}, Произведение цифр - {sotnya1*desytok1*edinicy1}");
+
+}
+
 // 14.Пользователь вводит 2 числа от 0 до 10. Сложите переменные так, чтобы в
 // результате получилось выражение: “I’m хх". Проверки на ввод только чисел.
 // Проверки на ввод чисел до 10. Если первое число 0, то опустить его
