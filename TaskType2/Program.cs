@@ -250,7 +250,45 @@ switch (truefalsechislo)
         break;
 }
 
+// // 8. Пользователь вводит номер месяц. Необходимо вывести пору года по номеру
+// // месяца (2 способа)
+Console.WriteLine("Задача 8");
+int numbermounths = Convert.ToInt32(Console.ReadLine());
+if (1 <= numbermounths && numbermounths <= 2 || numbermounths == 12)
+{
+    Console.WriteLine("Зима");
+}
+if (3 <= numbermounths && numbermounths <= 5)
+{
+    Console.WriteLine("Весна");
+}
+if (6 <= numbermounths && numbermounths <= 8)
+{
+    Console.WriteLine("Лето");
+}
+if (9 <= numbermounths && numbermounths <= 11)
+{
+    Console.WriteLine("Осень");
+}
+// 2 вариант
+Console.WriteLine("Задача 8, 2 способ");
+int numbermounths1 = Convert.ToInt32(Console.ReadLine());
 
+switch (numbermounths1, numbermounths1, numbermounths1)
+{
+    case (1, 2, 12):
+        System.Console.WriteLine("Зима");
+        break;
+    case (3, 4, 5):
+        System.Console.WriteLine("Весна");
+        break;
+    case (6, 7, 8):
+        System.Console.WriteLine("Лето");
+        break;
+    case (9, 10, 11):
+        System.Console.WriteLine("Осень");
+        break;
+}
 
 // 14.Пользователь вводит 2 числа от 0 до 10. Сложите переменные так, чтобы в
 // результате получилось выражение: “I’m хх". Проверки на ввод только чисел.
