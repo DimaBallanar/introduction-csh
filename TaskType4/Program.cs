@@ -90,9 +90,11 @@ string? strokatt7 = Console.ReadLine();
 Console.WriteLine(strokatt7.Replace('@','!'));
 
 // ______________________________________________________________________
-
-
-
+// 8.
+// Дана строка 'aaa bbb ccc'. Вырежите из нее слово 'bbb'
+Console.WriteLine("Задача 8");
+string strokatt8 = "aaa bbb ccc";
+Console.WriteLine(strokatt8.Remove(4,4));
 
 
 
