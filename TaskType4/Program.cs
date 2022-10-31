@@ -83,6 +83,11 @@ else
 // Console.WriteLine(symbolstroki);
 // strokatt6 = string.Concat(newstrokatt6[0], strokatt6);
 // ______________________________________________________________________
+// 7. На вход программе подаётся строка. Замените все @ на '!' с помощью
+// глобального поиска и замены (2 способа)
+Console.WriteLine("Задача 7");
+string? strokatt7 = Console.ReadLine();
+Console.WriteLine(strokatt7.Replace('@','!'));
 
 // ______________________________________________________________________
 
