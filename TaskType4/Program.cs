@@ -25,9 +25,16 @@ if (!string.IsNullOrEmpty(text))
         Console.WriteLine(result.Length);
     }
 }
+// ______________________________________________________________________
+// 3.Преобразовать строку ‘Full с StaCK DevELoper в массив вида [‘full’, ‘stack’,
+// ‘developer’]
 
-
-
+string textUser = "Full сStaCK DevELoper";
+textUser = textUser.ToLower();
+string[] result1 = textUser.Split(' ');
+System.Console.WriteLine(result1[0]);
+System.Console.WriteLine(result1[1]);
+System.Console.WriteLine(result1[2]);
 
 
 
