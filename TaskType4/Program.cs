@@ -127,3 +127,11 @@ Console.WriteLine(strokatt10.Length);
 Console.WriteLine("Задача 11");
 string? data11 = Console.ReadLine();
 Console.WriteLine(data11.Replace('-','!'));
+// ______________________________________________________________________
+// 12.
+// Пользователь вводит дату в формате 'xxxx-xx-xx'. Преобразуйте эту дату в формат
+// 'xx.xx.xxxx'
+Console.WriteLine("Задача 12");
+string? data12 = Console.ReadLine();
+string[] massiv12 = data12.Split('-');
+Console.WriteLine($"{massiv12[2]}.{massiv12[1]}.{massiv12[0]}");
