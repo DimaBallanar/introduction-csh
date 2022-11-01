@@ -186,9 +186,9 @@ if (yu.Length < 5 && int.TryParse(yu, out int strokachislo) && !(yu == null) && 
     int edinicy = strokachislo / 1 - tysach * 1000 - sotnya * 100 - desytok * 10;
     if (tysach % 2 == 0)
     {
-        Console.WriteLine($"{tysach}-кратно двум");
+        string sttysach = $"{tysach}-кратно двум";
     }
-    if (tysach % 2 != 0)
+    else
     {
         Console.WriteLine($"{tysach}-не кратно двум");
     }
@@ -196,7 +196,7 @@ if (yu.Length < 5 && int.TryParse(yu, out int strokachislo) && !(yu == null) && 
     {
         Console.WriteLine($"{sotnya}-кратно двум");
     }
-    if (sotnya % 2 != 0)
+    else
     {
         Console.WriteLine($"{sotnya}-не кратно двум");
     }
@@ -204,7 +204,7 @@ if (yu.Length < 5 && int.TryParse(yu, out int strokachislo) && !(yu == null) && 
     {
         Console.WriteLine($"{desytok}-кратно двум");
     }
-    if (desytok % 2 != 0)
+    else
     {
         Console.WriteLine($"{desytok}-не кратно двум");
     }
@@ -212,7 +212,7 @@ if (yu.Length < 5 && int.TryParse(yu, out int strokachislo) && !(yu == null) && 
     {
         Console.WriteLine($"{edinicy}- кратно двум");
     }
-    if (edinicy % 2 != 0)
+    else
     {
         Console.WriteLine($"{edinicy}-не кратно двум");
     }
@@ -226,7 +226,7 @@ else if (yu.Length < 5 && int.TryParse(yu, out strokachislo) && !(yu == null) &&
     {
         Console.WriteLine($"{sotnya}-кратно двум");
     }
-    if (sotnya % 2 != 0)
+    else
     {
         Console.WriteLine($"{sotnya}-не кратно двум");
     }
@@ -234,7 +234,7 @@ else if (yu.Length < 5 && int.TryParse(yu, out strokachislo) && !(yu == null) &&
     {
         Console.WriteLine($"{desytok}-кратно двум");
     }
-    if (desytok % 2 != 0)
+    else
     {
         Console.WriteLine($"{desytok}-не кратно двум");
     }
@@ -242,7 +242,7 @@ else if (yu.Length < 5 && int.TryParse(yu, out strokachislo) && !(yu == null) &&
     {
         Console.WriteLine($"{edinicy}- кратно двум");
     }
-    if (edinicy % 2 != 0)
+    else
     {
         Console.WriteLine($"{edinicy}-не кратно двум");
     }
@@ -256,7 +256,7 @@ else if (yu.Length < 5 && int.TryParse(yu, out strokachislo) && !(yu == null) &&
     {
         Console.WriteLine($"{desytok}-кратно двум");
     }
-    if (desytok % 2 != 0)
+    else
     {
         Console.WriteLine($"{desytok}-не кратно двум");
     }
@@ -264,7 +264,7 @@ else if (yu.Length < 5 && int.TryParse(yu, out strokachislo) && !(yu == null) &&
     {
         Console.WriteLine($"{edinicy}- кратно двум");
     }
-    if (edinicy % 2 != 0)
+    else
     {
         Console.WriteLine($"{edinicy}-не кратно двум");
     }
@@ -277,7 +277,7 @@ else if (yu.Length < 5 && int.TryParse(yu, out strokachislo) && !(yu == null) &&
     {
         Console.WriteLine($"{edinicy}- кратно двум");
     }
-    if (edinicy % 2 != 0)
+    else
     {
         Console.WriteLine($"{edinicy}-не кратно двум");
     }
@@ -285,6 +285,7 @@ else if (yu.Length < 5 && int.TryParse(yu, out strokachislo) && !(yu == null) &&
 else if (yu.Length > 5 && int.TryParse(yu, out strokachislo) == true)
 { Console.WriteLine("Вы ввели число больше 9999, введите меньше"); }
 else { Console.WriteLine("Вы ввели не число"); }
+
 //-----------------------------------------------------------
 // вариант 2 (не до конца доведённый)
 // if (yu.Length < 5)
