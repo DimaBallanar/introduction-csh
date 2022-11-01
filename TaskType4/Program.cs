@@ -135,3 +135,9 @@ Console.WriteLine("Задача 12");
 string? data12 = Console.ReadLine();
 string[] massiv12 = data12.Split('-');
 Console.WriteLine($"{massiv12[2]}.{massiv12[1]}.{massiv12[0]}");
+// ______________________________________________________________________
+// 13.
+// Дан массив ['я', 'учу', 'javascript', '!']. С помощью метода join преобразуйте массив в
+// строку 'я+учу+javascript+!'.
+string[] massiv13 ={"я", "учу", "javascript", "!"};
+Console.WriteLine(string.Join("+",massiv13));
