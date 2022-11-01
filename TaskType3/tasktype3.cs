@@ -118,7 +118,7 @@ else
 Console.WriteLine("Задача 8");
 double er = Convert.ToDouble(Console.ReadLine());
 double er1 = Convert.ToDouble(Console.ReadLine());
-double otvet = er==er1 ? 0.0+ 10 : er > er1 ? er / er1 : er1 - er;
+double otvet = er == er1 ? 0.0 + 10 : er > er1 ? er / er1 : er1 - er;
 Console.WriteLine(Math.Round(otvet, 2));
 //_________________________________________________________
 // 9. Ввести две строки, если две строки числа то ввести арифметический оператор, b в зависисмоти от арфметического 
@@ -148,6 +148,12 @@ if (int.TryParse(str, out irt) && int.TryParse(str1, out irt1))
             case "*":
                 Console.WriteLine(irt * irt1);
                 break;
+            case "%":
+                Console.WriteLine(irt % irt1);
+                break;
+            case "!":
+                Console.WriteLine(irt != irt1);
+                break;
         }
     }
     else { Console.WriteLine("Строка оператор null или empty"); }
@@ -159,8 +165,10 @@ Console.WriteLine("Задача 10");
 string? linestroka1 = Console.ReadLine();
 string? linestroka2 = Console.ReadLine();
 linestroka1 = linestroka1 + linestroka2;
-linestroka1 = linestroka1 + "rgr";
-Console.WriteLine($"{linestroka1}" + "grb");
+Console.WriteLine($"{linestroka1}");
+linestroka1 += linestroka2;
+Console.WriteLine($"{linestroka1}");
+Console.WriteLine($"{linestroka1 + linestroka2}");
 //_________________________________________________________
 // // 11. Ввести строку до 5 символов, если строка число то вывести для кажкой цифры в числе кратно 
 // // оно двум либо нет, то есть 6352 => 6 крастно двум, 3 не кратно двум, 5  не кратно двум, 2 
