@@ -49,6 +49,7 @@ long peremenya13 = (long)peremenya12;
 float peremenya14 = (float)peremenya13;
 double peremenya15 = (double)peremenya14;
 decimal peremenya16 = (decimal)peremenya15;
+byte peremenya17 = (byte)peremenya16;
 //_________________________________________________________
 // 4. Ввести два числа, произвести арифметические над числами и записать результат в первое число (+, -, /, *, %)
 Console.WriteLine("Задача 4");
@@ -64,11 +65,11 @@ number = number % number2;
 Console.WriteLine("Задача 5");
 int chislotask5 = Convert.ToInt32(Console.ReadLine());
 int chislo1task5 = 1;
-chislotask5 = chislotask5 +1;
+chislotask5 = chislotask5 + 1;
 chislotask5++;
 ++chislotask5;
-chislotask5=chislotask5+chislo1task5;
-chislotask5+=1;
+chislotask5 = chislotask5 + chislo1task5;
+chislotask5 += 1;
 Console.WriteLine(chislotask5);
 //_________________________________________________________
 // 6. Ввести строку, если строка число найти остаток от деления на 5, в противном случае вывести 
@@ -79,6 +80,15 @@ int outnumbertask6;
 bool resulttask6 = int.TryParse(chislotask6, out outnumbertask6);
 string vyvodtask6 = resulttask6 == true ? $"{outnumbertask6 % 5}" : "введено не число";
 Console.WriteLine($"{vyvodtask6}");
+// -----------------------
+// 2 способ
+Console.WriteLine("Задача 6");
+string? chislo1task6 = Console.ReadLine();
+int outnumber1task6;
+bool result1task6 = int.TryParse(chislo1task6, out outnumber1task6);
+string vyvod1task6 = result1task6 == true ? $"{outnumber1task6 % 5}" : "введено не число";
+Console.WriteLine($"{vyvod1task6}");
+
 //_________________________________________________________
 // 7. Ввести две строки, если строки числа вывести их сумму, в противном случае вывести сообщение какие строки не являются числом
 Console.WriteLine("Задача 7");
@@ -88,15 +98,19 @@ int outnumber;
 int outnumber1;
 if (int.TryParse(chislo1, out outnumber) && int.TryParse(chislo2, out outnumber1))
 {
-    Console.WriteLine(chislo1+chislo2);
+    Console.WriteLine(outnumber + outnumber1);
 }
 else if (int.TryParse(chislo1, out outnumber))
 {
-    Console.WriteLine("chislo1 - не число");
+    Console.WriteLine("chislo2 - не число");
 }
 else if (int.TryParse(chislo2, out outnumber1))
 {
-    Console.WriteLine("chislo2 - не число");
+    Console.WriteLine("chislo1 - не число");
+}
+else
+{
+    Console.WriteLine("chislo1 - не число,chislo2 - не число");
 }
 //_________________________________________________________
 // 8. Ввести два числа, если 1 число больше 2, то произвести деление 1 на 2, если 2 больше 1 вывести
@@ -104,8 +118,8 @@ else if (int.TryParse(chislo2, out outnumber1))
 Console.WriteLine("Задача 8");
 double er = Convert.ToDouble(Console.ReadLine());
 double er1 = Convert.ToDouble(Console.ReadLine());
-double otvet = er>er1 ?  er/er1 : er1-er+10;
-Console.WriteLine(Math.Round(otvet,2));
+double otvet = er==er1 ? 0.0+ 10 : er > er1 ? er / er1 : er1 - er;
+Console.WriteLine(Math.Round(otvet, 2));
 //_________________________________________________________
 // 9. Ввести две строки, если две строки числа то ввести арифметический оператор, b в зависисмоти от арфметического 
 // оператора произвести то действие в проитивных случаях произвести вывод сообщений. Сделать проверку на null 
@@ -144,9 +158,9 @@ else { Console.WriteLine("Одна из строк is not число"); }
 Console.WriteLine("Задача 10");
 string? linestroka1 = Console.ReadLine();
 string? linestroka2 = Console.ReadLine();
-linestroka1= linestroka1+linestroka2;
-linestroka1=linestroka1+"rgr";
-Console.WriteLine($"{linestroka1}"+"grb");
+linestroka1 = linestroka1 + linestroka2;
+linestroka1 = linestroka1 + "rgr";
+Console.WriteLine($"{linestroka1}" + "grb");
 //_________________________________________________________
 // // 11. Ввести строку до 5 символов, если строка число то вывести для кажкой цифры в числе кратно 
 // // оно двум либо нет, то есть 6352 => 6 крастно двум, 3 не кратно двум, 5  не кратно двум, 2 
@@ -260,7 +274,7 @@ else if (yu.Length < 5 && int.TryParse(yu, out strokachislo) && !(yu == null) &&
         Console.WriteLine($"{edinicy}-не кратно двум");
     }
 }
-else if (yu.Length > 5 && int.TryParse(yu, out strokachislo)==true )
+else if (yu.Length > 5 && int.TryParse(yu, out strokachislo) == true)
 { Console.WriteLine("Вы ввели число больше 9999, введите меньше"); }
 else { Console.WriteLine("Вы ввели не число"); }
 //-----------------------------------------------------------

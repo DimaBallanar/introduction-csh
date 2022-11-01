@@ -87,14 +87,14 @@ else
 // глобального поиска и замены (2 способа)
 Console.WriteLine("Задача 7");
 string? strokatt7 = Console.ReadLine();
-Console.WriteLine(strokatt7.Replace('@','!'));
+Console.WriteLine(strokatt7.Replace('@', '!'));
 
 // ______________________________________________________________________
 // 8.
 // Дана строка 'aaa bbb ccc'. Вырежите из нее слово 'bbb'
 Console.WriteLine("Задача 8");
 string strokatt8 = "aaa bbb ccc";
-Console.WriteLine(strokatt8.Remove(4,4));
+Console.WriteLine(strokatt8.Remove(4, 4));
 
 // ______________________________________________________________________
 // 9. На вход программе подается переменная date, в котрой лежит дата в формате
@@ -126,7 +126,7 @@ Console.WriteLine(strokatt10.Length);
 // Пользователь вводит дату в формате ‘х-х-х'. Замените все дефисы на '!'
 Console.WriteLine("Задача 11");
 string? data11 = Console.ReadLine();
-Console.WriteLine(data11.Replace('-','!'));
+Console.WriteLine(data11.Replace('-', '!'));
 // ______________________________________________________________________
 // 12.
 // Пользователь вводит дату в формате 'xxxx-xx-xx'. Преобразуйте эту дату в формат
@@ -139,5 +139,6 @@ Console.WriteLine($"{massiv12[2]}.{massiv12[1]}.{massiv12[0]}");
 // 13.
 // Дан массив ['я', 'учу', 'javascript', '!']. С помощью метода join преобразуйте массив в
 // строку 'я+учу+javascript+!'.
-string[] massiv13 ={"я", "учу", "javascript", "!"};
-Console.WriteLine(string.Join("+",massiv13));
+string[] massiv13 = { "я", "учу", "javascript", "!" };
+Console.WriteLine(string.Join("+", massiv13));
+// ______________________________________________________________________
