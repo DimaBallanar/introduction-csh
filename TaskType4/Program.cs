@@ -121,3 +121,9 @@ Console.WriteLine($"{massiv10[1]},{massiv10[2]}");
 Console.WriteLine(strokatt10.IndexOf("m"));
 Console.WriteLine(strokatt10.LastIndexOf("m"));
 Console.WriteLine(strokatt10.Length);
+// ______________________________________________________________________
+// 11.
+// Пользователь вводит дату в формате ‘х-х-х'. Замените все дефисы на '!'
+Console.WriteLine("Задача 11");
+string? data11 = Console.ReadLine();
+Console.WriteLine(data11.Replace('-','!'));
