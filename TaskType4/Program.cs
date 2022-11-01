@@ -96,8 +96,14 @@ Console.WriteLine("Задача 8");
 string strokatt8 = "aaa bbb ccc";
 Console.WriteLine(strokatt8.Remove(4,4));
 
-
-
+// ______________________________________________________________________
+// 9. На вход программе подается переменная date, в котрой лежит дата в формате
+// 'xxxx-xx-xx'. Преобразуйте эту дату в формат 'xx/xx/xxxx’. reverse)
+Console.WriteLine("Задача 9");
+string strokatt9 = "2022-10-31";
+string[] massiv = strokatt9.Split('-');
+Console.WriteLine($"{massiv[2]}/{massiv[1]}/{massiv[0]}");
+// ______________________________________________________________________
 
 
 
