@@ -191,8 +191,22 @@ else
     System.Console.WriteLine("Вы ввели пустоту или Null");
 }
 
-
-
+// 18.
+// Пользователь вводит строку. Необходимо вывести все гласные отдельной
+// строкой ( for)
+// fullstack => ua
+Console.WriteLine("Задача 18");
+string? strokatt18 = Console.ReadLine();
+if (!string.IsNullOrEmpty(strokatt18))
+{
+    for (int i = 0; i < strokatt18.Length; i++)
+    {
+         if (strokatt18[i] == 'a' || strokatt18[i] == 'e' || strokatt18[i] == 'i' || strokatt18[i] == 'o' || strokatt18[i] == 'u'|| strokatt18[i] == 'y')
+    { System.Console.WriteLine(strokatt18[i]); }
+    }
+    
+ }
+else { System.Console.WriteLine("Вы ввели пустоту или Null"); }
 
 // 22 На вход программе подается строка. Напишите программу, которая меняет 
 // регистр символов, другими словами замените все строчные символы заглавными 
