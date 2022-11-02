@@ -41,8 +41,9 @@ System.Console.WriteLine(result1[2]);
 // то узнать какая у нее длина. Привести к одному регистру, убрать лишние пробелы
 Console.WriteLine("Задача 4");
 string? strokatt4 = Console.ReadLine();
-if (!int.TryParse(strokatt4, out _) && !string.IsNullOrEmpty(strokatt4))
+if (!string.IsNullOrEmpty(strokatt4) && !int.TryParse(strokatt4, out _))
 {
+    Console.WriteLine(strokatt4.Length);
     Console.WriteLine(strokatt4.Trim().ToUpper());
 }
 else
@@ -51,14 +52,14 @@ else
 }
 // ______________________________________________________________________
 // 5.‘HTML JavaScript PHP’ преобразовать в "HTML-JAVASCRIPT-PHP"
-Console.WriteLine("Задача 5");
-string strokatt5 = "HTML{0}JavaScript{1}PHP";
-strokatt5 = string.Format(strokatt5, "-", "-");
-Console.WriteLine(strokatt5.ToUpper());
-//-------------------------------------------
-Console.WriteLine("Задача 5 - 2 способ");
+Console.WriteLine("Задача 5 - 1 способ");
 string newstrokatt5 = "HTML JavaScript PHP";
 Console.WriteLine(newstrokatt5.ToUpper().Replace(" ", "-"));
+//-------------------------------------------
+// Console.WriteLine("Задача 5 - 2 способ ");
+// string strokatt5 = "HTML{0}JavaScript{1}PHP";
+// strokatt5 = string.Format(strokatt5, "-", "-");
+// Console.WriteLine(strokatt5.ToUpper());
 // // ______________________________________________________________________
 // 6. Ввести строку. +Проверить является ли это число или строка. +Если число, то
 // ошибка ввода. Если это строка то первый символ поставить в верхний регистр.
@@ -142,3 +143,43 @@ Console.WriteLine($"{massiv12[2]}.{massiv12[1]}.{massiv12[0]}");
 string[] massiv13 = { "я", "учу", "javascript", "!" };
 Console.WriteLine(string.Join("+", massiv13));
 // ______________________________________________________________________
+// 14.
+// Дан массив. Вывести каждый одельный элемент в консоль ( for)
+Console.WriteLine("Задача 14");
+string[] massiv14 = { "математика", "биология", "география", "физика" };
+for (int i = 0; i < massiv14.Length; i++)
+{
+    System.Console.WriteLine(massiv14[i]);
+}
+
+
+// 22 На вход программе подается строка. Напишите программу, которая меняет 
+// регистр символов, другими словами замените все строчные символы заглавными 
+// и наоборот.
+// Swap Case => sWAP cASE
+// text = text?.Trim();
+if (!string.IsNullOrEmpty(text)) //Is or Has => string.IsXXX or string.HasXXX результат true or false
+{
+    string result = "";
+    for (int i = 0; i < text.Length; i++)
+    {
+        if (char.IsUpper(text[i]))
+        {
+            result += char.ToLower(text[i]).ToString(); // Convert.ToString( char.ToLower(text[i]))
+        }
+        else if (char.IsLower(text[i]))
+        {
+            result += char.ToUpper(text[i]).ToString();
+        }
+        else
+        {
+            result += text[i].ToString();
+        }
+    }
+
+    System.Console.WriteLine(result);
+}
+else
+{
+    System.Console.WriteLine("Empty string");
+}

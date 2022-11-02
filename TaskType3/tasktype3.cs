@@ -186,35 +186,36 @@ if (yu.Length < 5 && int.TryParse(yu, out int strokachislo) && !(yu == null) && 
     int edinicy = strokachislo / 1 - tysach * 1000 - sotnya * 100 - desytok * 10;
     if (tysach % 2 == 0)
     {
-        string sttysach = $"{tysach}-кратно двум";
+        Console.Write($"{tysach}-кратно двум, ");
     }
     else
     {
-        Console.WriteLine($"{tysach}-не кратно двум");
+        Console.Write($"{tysach}-не кратно двум, ");
     }
+
     if (sotnya % 2 == 0)
     {
-        Console.WriteLine($"{sotnya}-кратно двум");
+        Console.Write($"{sotnya}-кратно двум, ");
     }
     else
     {
-        Console.WriteLine($"{sotnya}-не кратно двум");
+        Console.Write($"{sotnya}-не кратно двум, ");
     }
     if (desytok % 2 == 0)
     {
-        Console.WriteLine($"{desytok}-кратно двум");
+        Console.Write($"{desytok}-кратно двум, ");
     }
     else
     {
-        Console.WriteLine($"{desytok}-не кратно двум");
+        Console.Write($"{desytok}-не кратно двум, ");
     }
     if (edinicy % 2 == 0)
     {
-        Console.WriteLine($"{edinicy}- кратно двум");
+        Console.Write($"{edinicy}- кратно двум");
     }
     else
     {
-        Console.WriteLine($"{edinicy}-не кратно двум");
+        Console.Write($"{edinicy}-не кратно двум");
     }
 }
 else if (yu.Length < 5 && int.TryParse(yu, out strokachislo) && !(yu == null) && strokachislo > 99)
@@ -224,27 +225,27 @@ else if (yu.Length < 5 && int.TryParse(yu, out strokachislo) && !(yu == null) &&
     int edinicy = strokachislo / 1 - sotnya * 100 - desytok * 10;
     if (sotnya % 2 == 0)
     {
-        Console.WriteLine($"{sotnya}-кратно двум");
+        Console.Write($"{sotnya}-кратно двум, ");
     }
     else
     {
-        Console.WriteLine($"{sotnya}-не кратно двум");
+        Console.Write($"{sotnya}-не кратно двум, ");
     }
     if (desytok % 2 == 0)
     {
-        Console.WriteLine($"{desytok}-кратно двум");
+        Console.Write($"{desytok}-кратно двум, ");
     }
     else
     {
-        Console.WriteLine($"{desytok}-не кратно двум");
+        Console.Write($"{desytok}-не кратно двум, ");
     }
     if (edinicy % 2 == 0)
     {
-        Console.WriteLine($"{edinicy}- кратно двум");
+        Console.Write($"{edinicy}- кратно двум, ");
     }
     else
     {
-        Console.WriteLine($"{edinicy}-не кратно двум");
+        Console.Write($"{edinicy}-не кратно двум, ");
     }
 }
 else if (yu.Length < 5 && int.TryParse(yu, out strokachislo) && !(yu == null) && strokachislo > 9)
@@ -254,19 +255,19 @@ else if (yu.Length < 5 && int.TryParse(yu, out strokachislo) && !(yu == null) &&
     int edinicy = strokachislo / 1 - desytok * 10;
     if (desytok % 2 == 0)
     {
-        Console.WriteLine($"{desytok}-кратно двум");
+        Console.Write($"{desytok}-кратно двум, ");
     }
     else
     {
-        Console.WriteLine($"{desytok}-не кратно двум");
+        Console.Write($"{desytok}-не кратно двум, ");
     }
     if (edinicy % 2 == 0)
     {
-        Console.WriteLine($"{edinicy}- кратно двум");
+        Console.Write($"{edinicy}- кратно двум");
     }
     else
     {
-        Console.WriteLine($"{edinicy}-не кратно двум");
+        Console.Write($"{edinicy}-не кратно двум");
     }
 }
 else if (yu.Length < 5 && int.TryParse(yu, out strokachislo) && !(yu == null) && strokachislo >= 0)
@@ -275,11 +276,11 @@ else if (yu.Length < 5 && int.TryParse(yu, out strokachislo) && !(yu == null) &&
     int edinicy = strokachislo / 1;
     if (edinicy % 2 == 0)
     {
-        Console.WriteLine($"{edinicy}- кратно двум");
+        Console.Write($"{edinicy}- кратно двум");
     }
     else
     {
-        Console.WriteLine($"{edinicy}-не кратно двум");
+        Console.Write($"{edinicy}-не кратно двум");
     }
 }
 else if (yu.Length > 5 && int.TryParse(yu, out strokachislo) == true)
