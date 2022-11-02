@@ -172,6 +172,26 @@ for (int i = 0; i < strokatt16.Length; i++)
 }
 System.Console.WriteLine(kolglas);
 
+// 17.
+// Пользователь вводит строку. Необходимо посчитать количество согласных ( for)
+Console.WriteLine("Задача 17");
+string? strokatt17 = Console.ReadLine();
+int kolsoglas = 0;
+if (!string.IsNullOrEmpty(strokatt17))
+{
+for (int i = 0; i < strokatt17.Length; i++)
+{
+    if (strokatt17[i] == 'b' || strokatt17[i] == 'c' || strokatt17[i] == 'd' || strokatt17[i] == 'q' || strokatt17[i] == 'w'|| strokatt17[i] == 'r'|| strokatt17[i] == 't' || strokatt17[i] == 'p' || strokatt17[i] == 's' || strokatt17[i] == 'j' || strokatt17[i] == 'f' || strokatt17[i] == 'g' || strokatt17[i] == 'h' || strokatt17[i] == 'l' || strokatt17[i] == 'z' || strokatt17[i] == 'x' || strokatt17[i] == 'v' || strokatt17[i] == 'n' || strokatt17[i] == 'm')
+    { kolsoglas++; }
+}
+System.Console.WriteLine(kolsoglas);
+}
+else
+{
+    System.Console.WriteLine("Вы ввели пустоту или Null");
+}
+
+
 
 
 // 22 На вход программе подается строка. Напишите программу, которая меняет 
