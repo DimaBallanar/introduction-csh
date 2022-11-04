@@ -41,3 +41,33 @@ foreach (int item in array45)
 {
     Console.WriteLine(item);
 }
+
+// // 3.
+// // Дан массив с элементами [2, 3, 4, 5]. С помощью 3 циклов найдите произведение
+// // элементов этого массива.
+
+int[] array4 = new int[4] { 2, 3, 4, 5 };
+int i = 0;
+int result = 1;
+while (i < array4.Length)
+{
+    result *= array4[i];
+    i++;
+}
+Console.WriteLine(result);
+// -------------------
+result = 1;
+for (int j = 0; j < array4.Length; j++)
+{
+    result *= array4[j];
+
+}
+Console.WriteLine(result);
+// -------------------
+result = 1;
+foreach (int item in array4)
+{
+result *= item;
+}
+Console.WriteLine(result);
+// // -------------------
