@@ -181,7 +181,17 @@ if (!string.IsNullOrEmpty(strokatt17))
 {
     for (int i = 0; i < strokatt17.Length; i++)
     {
-        if (strokatt17[i] == 'b' || strokatt17[i] == 'c' || strokatt17[i] == 'd' || strokatt17[i] == 'q' || strokatt17[i] == 'w' || strokatt17[i] == 'r' || strokatt17[i] == 't' || strokatt17[i] == 'p' || strokatt17[i] == 's' || strokatt17[i] == 'j' || strokatt17[i] == 'f' || strokatt17[i] == 'g' || strokatt17[i] == 'h' || strokatt17[i] == 'l' || strokatt17[i] == 'z' || strokatt17[i] == 'x' || strokatt17[i] == 'v' || strokatt17[i] == 'n' || strokatt17[i] == 'm')
+        if (strokatt17[i] == 'b' ||
+            strokatt17[i] == 'c' ||
+            strokatt17[i] == 'd' || strokatt17[i] == 'q' ||
+            strokatt17[i] == 'w' || strokatt17[i] == 'r' ||
+            strokatt17[i] == 't' || strokatt17[i] == 'p' ||
+            strokatt17[i] == 's' || strokatt17[i] == 'j' ||
+            strokatt17[i] == 'f' || strokatt17[i] == 'g' ||
+            strokatt17[i] == 'h' || strokatt17[i] == 'l' ||
+            strokatt17[i] == 'z' || strokatt17[i] == 'x' ||
+            strokatt17[i] == 'v' || strokatt17[i] == 'n' ||
+            strokatt17[i] == 'm')
         { kolsoglas++; }
     }
     System.Console.WriteLine(kolsoglas);
