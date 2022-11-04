@@ -71,3 +71,15 @@ result *= item;
 }
 Console.WriteLine(result);
 // // -------------------
+// 4.
+// Выведите столбец чисел от 11 до 33 циклом while
+for (int k = 11; k <= 33; k++)
+{
+    System.Console.WriteLine(k);
+}
+// // -------------------
+int number4 = 11;
+while (number4 <= 33)
+{
+    System.Console.WriteLine(number4++);
+}
