@@ -428,7 +428,10 @@ System.Console.WriteLine(stroka17.ToUpper());
 }
 
 //18.Пользователь вводит строку. Необходимо повторить ее трижды
-
+System.Console.WriteLine("Задача 18");
+string? stroka18 = Console.ReadLine();
+if (!string.IsNullOrEmpty(stroka18))
+{ System.Console.WriteLine(stroka18+stroka18+stroka18); }
 
 // 19.Ввести строку. Проверить является ли это число или текст. Если число, то
 // выяснить, четное или нет. Если это текст и равен “hschool ”, вывести true. В
