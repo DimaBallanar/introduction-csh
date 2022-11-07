@@ -83,5 +83,11 @@ while (number4 <= 33)
 {
     System.Console.WriteLine(number4++);
 }
-
-
+//_______________________________________
+// // 5. Выведите столбец четных чисел в 
+// промежутке от 0 до 100 ( for)
+ System.Console.WriteLine("Задача 5");
+ for (int l = 0; l <=100; l+=2)
+ {
+    Console.WriteLine(l);
+ }
