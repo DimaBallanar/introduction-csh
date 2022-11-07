@@ -413,6 +413,19 @@ else
 string? funf = Console.ReadLine();
 Console.WriteLine(funf[0]);
 // //______________________________________________________________________________________________________________________________
+// 17.
+// Пользователь вводит строку. Необходимо сделать проверку, что это не число и
+// вывести текущую строку в большом регистре
+System.Console.WriteLine("Задача 17");
+string? stroka17 = Console.ReadLine();
+if (!string.IsNullOrEmpty(stroka17) && int.TryParse(stroka17,out int stroka17number))
+{
+System.Console.WriteLine($"Число-{stroka17number}, введите строку");
+}
+else
+{
+System.Console.WriteLine(stroka17.ToUpper());
+}
 
 //18.Пользователь вводит строку. Необходимо повторить ее трижды
 
