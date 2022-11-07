@@ -117,3 +117,16 @@ for (int x = 0; x < array7.Length; x++)
 sumarray += array7[x];
 }
 Console.WriteLine(sumarray);
+
+// //_______________________________________
+// 8.Дан массив 2, 5, 9, 15, 0, 4. Выведите все числа кратные 3 циклом for each in
+System.Console.WriteLine("Задача 8");
+
+int[] array8 = new[] { 2, 5, 9, 15, 0, 4 };
+foreach (int item1 in array8)
+{
+    if (item1 % 3 == 0)
+    {
+        Console.WriteLine(item1);
+    }
+}
