@@ -104,12 +104,16 @@ while (sum <= 100)
     sum++;
 }
 System.Console.WriteLine(resultsum);
+//_______________________________________
 
-
-
-
-
-
-
-
-
+// 7.
+// Дан массив с элементами [1, 2, 3, 4, 5]. С помощью цикла for of найдите сумму
+// элементов этого массива
+System.Console.WriteLine("Задача 7");
+int[] array7 = new[] { 1, 2, 3, 4, 5 };
+int sumarray = 0;
+for (int x = 0; x < array7.Length; x++)
+{
+sumarray += array7[x];
+}
+Console.WriteLine(sumarray);
