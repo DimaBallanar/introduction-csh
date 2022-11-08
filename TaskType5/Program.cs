@@ -159,3 +159,14 @@ foreach (int index11 in array11)
 
 }
 System.Console.WriteLine(sum11);
+
+//12.Дан массив числами, например: [10, 20, 30, 50, 235, 3000]. Выведите на экран только
+// те числа из массива, которые начинаются на цифру 1, 2 или 5 --> 10, 20, 50, 235
+int[] array12 = { 10, 20, 30, 50, 235, 3000 };
+
+for (int index12 = 0; index12 < array12.Length; index12++)
+{
+    string array10string0 = Convert.ToString(array12[index12]);
+    if (array10string0.StartsWith('1') || array10string0.StartsWith('2') || array10string0.StartsWith('5'))
+        System.Console.WriteLine(array10string0);
+}
