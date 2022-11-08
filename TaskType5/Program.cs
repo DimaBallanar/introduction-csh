@@ -166,7 +166,19 @@ int[] array12 = { 10, 20, 30, 50, 235, 3000 };
 
 for (int index12 = 0; index12 < array12.Length; index12++)
 {
-    string array10string0 = Convert.ToString(array12[index12]);
-    if (array10string0.StartsWith('1') || array10string0.StartsWith('2') || array10string0.StartsWith('5'))
-        System.Console.WriteLine(array10string0);
+    string array12string0 = Convert.ToString(array12[index12]);
+    if (array12string0.StartsWith('1') || array12string0.StartsWith('2') || array12string0.StartsWith('5'))
+        System.Console.WriteLine(array12string0);
 }
+
+// 13.
+// Дан массив с элементами 1, 2, 3, 4, 5, 6, 7, 8, 9. С помощью цикла for создайте строку
+// 1 2 3 4 5 6 7 8 9
+int[] array13 = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+string array13stringsum = "";
+for (int index13 = 0; index13 < array13.Length; index13++)
+{
+    string array13string = Convert.ToString(array13[index13]);
+    array13stringsum += array13string;
+}
+System.Console.WriteLine(array13stringsum);
