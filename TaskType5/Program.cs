@@ -182,3 +182,14 @@ for (int index13 = 0; index13 < array13.Length; index13++)
     array13stringsum += array13string;
 }
 System.Console.WriteLine(array13stringsum);
+// --------------------
+// 2 способ
+int[] array13new = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+string array13stringsum1 = "";
+for (int index13new = 0; index13new < array13new.Length; index13new++)
+{
+    
+    string array13string1 = string.Join(' ', array13new[index13new]);
+    array13stringsum1 += array13string1;
+}
+System.Console.WriteLine(array13stringsum1);
