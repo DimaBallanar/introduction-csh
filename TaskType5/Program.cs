@@ -148,3 +148,14 @@ while (index10 < array10.Length)
     index10++;
 }
 
+//11.Дан массив с числами. Числа могут быть положительными и отрицательными.
+// Найдите сумму всех положительных элементов массива циклом for each in
+int[] array11 = new[] { 1, 4, -7, -44, 77, -88 };
+int sum11 = 0;
+foreach (int index11 in array11)
+{
+    if (index11 > 0)
+        sum11 += index11;
+
+}
+System.Console.WriteLine(sum11);
