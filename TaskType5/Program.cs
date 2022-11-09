@@ -204,3 +204,19 @@ for (int index14 = 0; index14 < 100; index14++)
         System.Console.WriteLine(index14);
     }
 }
+
+//15. Дано предложение и количество раз которое его надо повторить. Напишите
+// программу, которая повторяет данное предложение нужное количество раз.
+System.Console.WriteLine("Задача 15");
+string? str15 = Console.ReadLine();
+int? number15 = Convert.ToInt32(Console.ReadLine());
+if (!string.IsNullOrEmpty(str15))
+{
+for (int index15=0; index15<=number15; index15++)
+{
+    System.Console.WriteLine(str15);
+}
+}
+else
+{System.Console.WriteLine("Вы ввели пустоту"); }
+
