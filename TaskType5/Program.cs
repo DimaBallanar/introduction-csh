@@ -193,3 +193,14 @@ for (int index13new = 0; index13new < array13new.Length; index13new++)
     array13stringsum1 += array13string1;
 }
 System.Console.WriteLine(array13stringsum1);
+
+// 14. Дано число 7, найдите все числа кратные 7 до 100
+System.Console.WriteLine("Задача 14");
+int number14 = 7;
+for (int index14 = 0; index14 < 100; index14++)
+{
+    if (index14 % number14 == 0)
+    {
+        System.Console.WriteLine(index14);
+    }
+}
