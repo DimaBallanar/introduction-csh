@@ -114,7 +114,7 @@ int[] array7 = new[] { 1, 2, 3, 4, 5 };
 int sumarray = 0;
 for (int x = 0; x < array7.Length; x++)
 {
-sumarray += array7[x];
+    sumarray += array7[x];
 }
 Console.WriteLine(sumarray);
 
@@ -188,7 +188,7 @@ int[] array13new = new[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 string array13stringsum1 = "";
 for (int index13new = 0; index13new < array13new.Length; index13new++)
 {
-    
+
     string array13string1 = string.Join(' ', array13new[index13new]);
     array13stringsum1 += array13string1;
 }
@@ -212,11 +212,29 @@ string? str15 = Console.ReadLine();
 int? number15 = Convert.ToInt32(Console.ReadLine());
 if (!string.IsNullOrEmpty(str15))
 {
-for (int index15=0; index15<=number15; index15++)
-{
-    System.Console.WriteLine(str15);
-}
+    for (int index15 = 0; index15 <= number15; index15++)
+    {
+        System.Console.WriteLine(str15);
+    }
 }
 else
-{System.Console.WriteLine("Вы ввели пустоту"); }
+{ System.Console.WriteLine("Вы ввели пустоту"); }
+
+
+// 16.
+// Пользователь вводит число, явдяющееся количеством элементов будущего
+// массива и выбирает тип данных массива. Напишите код заполнения массива
+// выбранным типом данных
+
+System.Console.WriteLine("Task 16");
+int number16 = Convert.ToInt32(Console.ReadLine());
+string? strsum16 = "";
+
+for (int index16 = 0; index16 < number16; index16++)
+{
+    int? str16 = Convert.ToInt32(Console.ReadLine());
+    strsum16 += str16 + ",";
+}
+string[] array16 = strsum16.Split(",");
+System.Console.WriteLine(array16[0]);
 
