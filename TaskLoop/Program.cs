@@ -38,6 +38,15 @@
     Console.WriteLine(resultIndex);
 }
 
+//2. Задача массив строк нужно + все строки
+string[] array = { "gdldgl", "sdfklsg", "fdsjks", "cvmklc" };
+string sum = "";
+for (int i = 0; i < array.Length; i++)
+{
+    sum += array[i];
+}
+System.Console.WriteLine(sum);
+
 //3. 
 {
     string[] array = { "github.com", "HannaPleshko" };
