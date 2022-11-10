@@ -238,3 +238,17 @@ for (int index16 = 0; index16 < number16; index16++)
 string[] array16 = strsum16.Split(",");
 System.Console.WriteLine(array16[0]);
 
+
+//17. Пользователь вводит число, явдяющееся количеством элементов будущего
+//массива. Напишите код заполнения массива Записать в массив только числа.
+System.Console.WriteLine("Task 17");
+int number17 = Convert.ToInt32(Console.ReadLine());
+string? strsum17 = "";
+
+for (int index17 = 0; index17 < number17; index17++)
+{
+    int? str17 = Convert.ToInt32(Console.ReadLine());
+    strsum17 += str17 + ",";
+}
+string[] array17 = strsum17.Split(",");
+System.Console.WriteLine(array17[0]);
