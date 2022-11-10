@@ -1,4 +1,44 @@
-﻿//3. 
+﻿//1. 
+{
+    int[] numbers = { 1, 8, 654, 8, 465, 84, 654, 84 };
+    int number = Convert.ToInt32(Console.ReadLine());
+    int resultIndex = 0;
+    int i = 0;
+    for (i = 0; i < numbers.Length; i++)
+    {
+        if (numbers[i] == number)
+        {
+            resultIndex = i;
+            break;
+        }
+        else
+        {
+            resultIndex = -1;
+        }
+    }
+    Console.WriteLine(resultIndex);
+}
+{
+    int[] numbers = { 1, 8, 654, 8, 465, 84, 654, 84 };
+    int number = Convert.ToInt32(Console.ReadLine());
+    int resultIndex = 0;
+    int i = 0;
+    for (i = numbers.Length - 1; -1 < i; i--)
+    {
+        if (numbers[i] == number)
+        {
+            resultIndex = i;
+            break;
+        }
+        else
+        {
+            resultIndex = -1;
+        }
+    }
+    Console.WriteLine(resultIndex);
+}
+
+//3. 
 {
     string[] array = { "github.com", "HannaPleshko" };
     string result1 = "";
