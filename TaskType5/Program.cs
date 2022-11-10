@@ -252,3 +252,38 @@ for (int index17 = 0; index17 < number17; index17++)
 }
 string[] array17 = strsum17.Split(",");
 System.Console.WriteLine(array17[0]);
+
+
+
+
+
+
+
+// 18.
+// Пользователь вводит многозначное число. Необходимо вставить двоеточие
+// между двумя нечетными числами. Работать с числом как с массивом.
+// Использовать for
+// 55639217 --> 5:563:921:7.
+// System.Console.WriteLine("Task 18");
+// int number18 = Convert.ToInt32(Console.ReadLine());
+// string str18 = Convert.ToString(number18);
+// string[] array18 = str18.Split("");
+// System.Console.WriteLine(array18[0]);
+
+System.Console.WriteLine("Task 18");
+int number18 = Convert.ToInt32(Console.ReadLine());
+string? strchislo = Convert.ToString(number18);
+string? strsum18 = "";
+string? str1sum18 = "";
+string? str18;
+for (int index18 = 0; index18 < strchislo.Length - 1; index18++)
+{
+    System.Console.WriteLine("Повторите многозначное число по 1 цифре");
+    str18 = Convert.ToString(Console.ReadLine());
+    strsum18 += str18 + ",";
+    System.Console.WriteLine(strsum18);
+}
+System.Console.WriteLine(str1sum18);
+str1sum18 += strchislo[strchislo.Length - 1];
+System.Console.WriteLine(str1sum18);
+string[] array18 = strsum18.Split(",");
