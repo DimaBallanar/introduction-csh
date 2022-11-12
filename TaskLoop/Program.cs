@@ -49,12 +49,12 @@ System.Console.WriteLine(sum);
 
 //3. 
 {
-    string[] array = { "github.com", "HannaPleshko" };
+    string[] array1 = { "github.com", "HannaPleshko" };
     string result1 = "";
     int i = 0;
-    while (i < array.Length)
+    while (i < array1.Length)
     {
-        result1 += array[i] + "/";
+        result1 += array1[i] + "/";
         i++;
     }
     result1 = result1.Remove(result1.Length - 1);
