@@ -235,6 +235,29 @@ if (!string.IsNullOrEmpty(strokatt19))
 }
 else { System.Console.WriteLine("Вы ввели пустоту или Null"); }
 
+//20 На вход программе подается строка, где каждое слово заканчивается “_”.
+// Программа должна убрать “_” и первую букву каждого слова (помимо первого),
+// преобразовать в верхний регистр (for)
+
+Console.WriteLine("Задача 20");
+string? str20 = Console.ReadLine();
+if (!string.IsNullOrEmpty(str20))
+{
+    string[] array20 = str20.Split('_');
+    string? s20n = "";
+    s20n += array20[0];
+    System.Console.WriteLine(s20n);
+    for (int index20 = 1; index20 < array20.Length; index20++)
+    {
+        string? newstr = Convert.ToString(array20[index20]);
+        s20n += String.Concat(char.ToUpper(newstr[0]), newstr.Remove(0, 1));
+    }
+    System.Console.WriteLine(s20n);
+}
+else
+{
+    System.Console.WriteLine("Пустая строка или налл");
+}
 
 // 22 На вход программе подается строка. Напишите программу, которая меняет 
 // регистр символов, другими словами замените все строчные символы заглавными 
