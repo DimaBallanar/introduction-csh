@@ -270,20 +270,33 @@ System.Console.WriteLine(array17[0]);
 // string[] array18 = str18.Split("");
 // System.Console.WriteLine(array18[0]);
 
+
 System.Console.WriteLine("Task 18");
 int number18 = Convert.ToInt32(Console.ReadLine());
 string? strchislo = Convert.ToString(number18);
 string? strsum18 = "";
 string? str1sum18 = "";
 string? str18;
-for (int index18 = 0; index18 < strchislo.Length - 1; index18++)
+for (int index18 = 0; index18 < strchislo.Length-1; index18++)
 {
     System.Console.WriteLine("Повторите многозначное число по 1 цифре");
-    str18 = Convert.ToString(Console.ReadLine());
+    str18 =Convert.ToString(Console.ReadLine());
     strsum18 += str18 + ",";
     System.Console.WriteLine(strsum18);
 }
 System.Console.WriteLine(str1sum18);
-str1sum18 += strchislo[strchislo.Length - 1];
+str1sum18 += strchislo[strchislo.Length-1];
 System.Console.WriteLine(str1sum18);
 string[] array18 = strsum18.Split(",");
+for (int indexarray = 0; indexarray < strchislo.Length; indexarray++)
+{
+    if (Convert.ToInt32(array18[indexarray]) % 2 != 0 && Convert.ToInt32(array18[indexarray+1]) % 2 != 0)
+    {
+        str1sum18 += $"{array18[indexarray]}:";
+    }
+    else
+    {
+        str1sum18 += $"{array18[indexarray]}";
+    }
+}
+System.Console.WriteLine(str1sum18);
