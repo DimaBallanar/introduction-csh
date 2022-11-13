@@ -259,6 +259,24 @@ else
     System.Console.WriteLine("Пустая строка или налл");
 }
 
+// 21. На вход программе подается строка, состоящая из имени и фамилии человека,
+// разделенных одним пробелом. Напишите программу, которая проверяет, что имя
+// и фамилия начинаются с заглавной буквы.
+// Chris Alan => true
+// chris alan => false
+
+Console.WriteLine("Задача 21");
+string? str21 = Console.ReadLine();
+if (!string.IsNullOrEmpty(str21))
+{
+    string[] array21 = str21.Split(' ');
+    int index21 = 0;
+    if (char.IsUpper(array21[index21][0]) && char.IsUpper(array21[index21+1][0]))
+    { System.Console.WriteLine(true); }
+    else { System.Console.WriteLine(false); }
+
+}
+
 // 22 На вход программе подается строка. Напишите программу, которая меняет 
 // регистр символов, другими словами замените все строчные символы заглавными 
 // и наоборот.
