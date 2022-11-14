@@ -395,3 +395,20 @@ else
 {
     System.Console.WriteLine("Пустота или налл");
 }
+// --------
+// 26. На вход программе подается строка текста. Напишите программу, которая
+// проверяет, что строка заканчивается подстрокой .com или .ru. Если
+// заканчивается, то вывести true, в противном случае false
+
+
+Console.WriteLine("Задача 26");
+string? str26 = Console.ReadLine();
+if (!string.IsNullOrEmpty(str26))
+{
+    if (str26.Contains(".com") || str26.Contains(".ru"))
+    {
+        System.Console.WriteLine(true);
+    }
+    else { System.Console.WriteLine(false); }
+}
+else { System.Console.WriteLine("Пустота или налл"); }
