@@ -315,13 +315,13 @@ else
 
 
 Console.WriteLine("Задача 23");
-string? str22 = Console.ReadLine();
+string? str23 = Console.ReadLine();
 string array22like = "ХОРОШ";
-if (!string.IsNullOrEmpty(str22))
+if (!string.IsNullOrEmpty(str23))
 {
-    str22 = str22.ToUpper();
-    string[] array22 = str22.Split(' ');
-    for (int index22 = 0; index22 < str22.Length; index22++)
+    str23 = str23.ToUpper();
+    string[] array22 = str23.Split(' ');
+    for (int index22 = 0; index22 < str23.Length; index22++)
     {
         if (array22[index22].Contains(array22like))
         {
@@ -345,15 +345,53 @@ else
 // abcABCD12345 => 3
 
 Console.WriteLine("Задача 24");
-string? str23 = Console.ReadLine();
+string? str24 = Console.ReadLine();
 int schet = 0;
-if (!string.IsNullOrEmpty(str23))
+if (!string.IsNullOrEmpty(str24))
 {
-    for (int index24 = 0; index24 < str23.Length; index24++)
+    for (int index24 = 0; index24 < str24.Length; index24++)
     {
-        if (char.IsLower(str23[index24]))
+        if (char.IsLower(str24[index24]))
             schet += 1;
     }
     System.Console.WriteLine(schet);
 }
 else { System.Console.WriteLine("Пустота или налл"); }
+
+//25. На вход программе подается строка из букв А, Г, Ц, Т. Напишите программу,
+// которая подсчитывает сколько букв
+// АааГГЦЦцТТтттА = А 4 Г 2 Ц 3 Т 5
+
+Console.WriteLine("Задача 25");
+string? str25 = Console.ReadLine();
+int schetchik1 = 0;
+int schetchik2 = 0;
+int schetchik3 = 0;
+int schetchik4 = 0;
+if (!string.IsNullOrEmpty(str25))
+{
+    for (int index25 = 0; index25 < str25.Length; index25++)
+    {
+        if (str25[index25] == 'А')
+        {
+            schetchik1 += 1;
+        }
+        else if (str25[index25] == 'Г')
+        {
+            schetchik2 += 1;
+        }
+        else if (str25[index25] == 'Ц')
+        {
+            schetchik3 += 1;
+        }
+        else if (str25[index25] == 'Т')
+        {
+            schetchik4 += 1;
+        }
+    }
+    System.Console.WriteLine($"А-{schetchik1}, Г-{schetchik2}, Ц-{schetchik3}, Т-{schetchik4}");
+}
+else
+{
+    System.Console.WriteLine("Пустота или налл");
+}
