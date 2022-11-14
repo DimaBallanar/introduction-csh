@@ -271,7 +271,7 @@ if (!string.IsNullOrEmpty(str21))
 {
     string[] array21 = str21.Split(' ');
     int index21 = 0;
-    if (char.IsUpper(array21[index21][0]) && char.IsUpper(array21[index21+1][0]))
+    if (char.IsUpper(array21[index21][0]) && char.IsUpper(array21[index21 + 1][0]))
     { System.Console.WriteLine(true); }
     else { System.Console.WriteLine(false); }
 
@@ -306,4 +306,36 @@ if (!string.IsNullOrEmpty(text)) //Is or Has => string.IsXXX or string.HasXXX р
 else
 {
     System.Console.WriteLine("Empty string");
+}
+
+//23. На вход программе подается строка текста. Напишите программу, которая
+// определяет является ли строка хорошей. Текст хороший, если содержит
+// подстроку «хорош» во всевозможных регистрах.
+// я очень хороший текст = => true
+
+
+Console.WriteLine("Задача 23");
+string? str22 = Console.ReadLine();
+string array22like = "ХОРОШ";
+if (!string.IsNullOrEmpty(str22))
+{
+    str22 = str22.ToUpper();
+    string[] array22 = str22.Split(' ');
+    for (int index22 = 0; index22 < str22.Length; index22++)
+    {
+        if (array22[index22].Contains(array22like))
+        {
+            System.Console.WriteLine(true);
+            break;
+        }
+        else
+        {
+            System.Console.WriteLine(false);
+            break;
+        }
+    }
+}
+else
+{
+    System.Console.WriteLine("Пустота или налл");
 }
