@@ -412,3 +412,18 @@ if (!string.IsNullOrEmpty(str26))
     else { System.Console.WriteLine(false); }
 }
 else { System.Console.WriteLine("Пустота или налл"); }
+
+// 27. На вход подается url . Если он начинается с http , содержит хотя бы один “/” и
+// заканчивается подстрокой .com или .ru, то вывести true, в противном случае false
+
+Console.WriteLine("Задача 27");
+string? str27 = Console.ReadLine();
+if (!string.IsNullOrEmpty(str27))
+{
+    if (str27.StartsWith("http") && str27.Contains('/') && (str27.EndsWith(".com") || str27.EndsWith(".ru")))
+    {
+        System.Console.WriteLine(true);
+    }
+    else { System.Console.WriteLine(false); }
+}
+else { System.Console.WriteLine("Пустота или налл"); }
