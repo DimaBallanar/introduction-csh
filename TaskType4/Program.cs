@@ -339,3 +339,21 @@ else
 {
     System.Console.WriteLine("Пустота или налл");
 }
+
+// 24. На вход программе подается строка. Напишите программу, которая подсчитывает
+// количество буквенных символов в нижнем регистре.
+// abcABCD12345 => 3
+
+Console.WriteLine("Задача 24");
+string? str23 = Console.ReadLine();
+int schet = 0;
+if (!string.IsNullOrEmpty(str23))
+{
+    for (int index24 = 0; index24 < str23.Length; index24++)
+    {
+        if (char.IsLower(str23[index24]))
+            schet += 1;
+    }
+    System.Console.WriteLine(schet);
+}
+else { System.Console.WriteLine("Пустота или налл"); }
