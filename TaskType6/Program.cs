@@ -108,3 +108,36 @@ if (!string.IsNullOrEmpty(stroka))
     array = indexsymbol.Split(',');
 }
 else { System.Console.WriteLine("Налл или пустота"); }
+
+// 4. Пользователь вводит число N, которое является индексом последнего элемента ряда
+// Фиббоначи. Вывести весь этот ряд записанный в массив.
+System.Console.WriteLine("Задача 4");
+System.Console.WriteLine("Введите индекс последнего лемента ряда Фиббоначи");
+int? indexmassivend = Convert.ToInt32(Console.ReadLine());
+string Fib = "";
+
+int element0 = 0;
+int element1 = 1;
+int elementx;
+
+if (indexmassivend == 0)
+{
+    Fib = String.Concat($"{element0}", ",");
+}
+if (indexmassivend == 1)
+{
+    Fib = String.Concat($"{element0}", ",", $"{element1}");
+}
+if (indexmassivend > 1)
+{
+    Fib = String.Concat($"{element0}", ",", $"{element1}");
+    for (int index4 = 2; index4 <= indexmassivend; index4++)
+    {
+        System.Console.WriteLine(Fib[index4 - 2]);
+        System.Console.WriteLine(Fib[index4]);
+        elementx = Convert.ToInt32(Fib[index4 - 2]) + Convert.ToInt32(Fib[index4 - 1]);
+        System.Console.WriteLine(elementx);
+        Fib += elementx;
+        Fib += ",";
+    }
+}
