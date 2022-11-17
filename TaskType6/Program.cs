@@ -84,3 +84,27 @@ for (int index = 0; index < str1.Length; index++)
     }
 }
 System.Console.WriteLine($"{symbol1}-символы,{letter1}-буквы, {whitespace1}-пробелы, {isnumber}-цифры");
+
+// 3. Пользователь вводит символ. Записать все позиции данного данного символа в строке в
+// массив и вывести через символ, который кажет пользователь.
+
+System.Console.WriteLine("Задача 3");
+System.Console.WriteLine("Введите строку");
+string? stroka = Console.ReadLine();
+System.Console.WriteLine("Введите символ, который будем искать");
+char? symbol = Convert.ToChar(Console.ReadLine());
+string[] array = { };
+string indexsymbol = "";
+if (!string.IsNullOrEmpty(stroka))
+{
+    for (int index3 = 0; index3 < stroka.Length; index3++)
+    {
+        if (symbol == stroka[index3])
+        {
+            indexsymbol = String.Concat($"{indexsymbol}", Convert.ToString(index3), ",");
+        }
+    }
+    System.Console.WriteLine(indexsymbol);
+    array = indexsymbol.Split(',');
+}
+else { System.Console.WriteLine("Налл или пустота"); }
