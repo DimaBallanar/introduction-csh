@@ -22,3 +22,51 @@
     }
     #endregion
 }
+#region Задача 2
+    // 2.Напишите метод, который принимает строку в маленьком регистре и возаращает
+    // строку, где каждое слово начинается с большого регистра
+    // hschool company --> Hschool C ompany
+    static void Task2()
+    {
+        string? str = Console.ReadLine();
+        System.Console.WriteLine(ConverterString(str));
+    }
+    static string ConverterString(string line)
+    {
+        string[] array1 = line.Split(' ');
+        for (int i = 0; i < array1.Length; i++)
+        {
+            string text = array1[i];
+            // преобразования текста 
+            text = char.ToUpper(text[0]) + text.Remove(0, 1);
+            array1[i] = text;
+        }
+        return string.Join(' ', array1);
+
+    }
+    #endregion
+
+    #region Задача 3 
+    // 3. Напишите метод, который принимает статичный массив строк. Необходимо отфильтровать значения и оставить только те, где длина строк до 2 символов.
+    //  [“by”, “belarus”, “de”, “ru”, “germany”] -> [“by”, “de”, “ru”]
+    static void Task3()
+    {
+        string[] text = { "by", "belarus", "de", "ru", "germany" };
+        Console.WriteLine(string.Join(",", MethodReplace(text)));
+    }
+    static string[] MethodReplace(string[] text)
+    {
+        string[] result = new string[100];
+        int i = 0;
+        foreach (string item in text)
+        {
+            if (item.Length < 3)
+            {
+                result[i] += item;
+                i++;
+            }
+        }
+        return result;
+    }
+    #endregion
+}
