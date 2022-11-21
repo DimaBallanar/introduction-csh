@@ -2,8 +2,10 @@
 {
     static void Main(string[] args)
     {
-        // Task1();
+        Task1();
         Task2();
+        Task3();
+        Task4();
     }
 
     #region Задача1
@@ -21,8 +23,8 @@
         return $"Привет, {name} {lastname}";
     }
     #endregion
-}
-#region Задача 2
+
+    #region Задача 2
     // 2.Напишите метод, который принимает строку в маленьком регистре и возаращает
     // строку, где каждое слово начинается с большого регистра
     // hschool company --> Hschool C ompany
@@ -69,4 +71,34 @@
         return result;
     }
     #endregion
+    #region Задача 4
+    // 4. На входе массив. Реализовать метод проверки на то что 
+    // в массиве только числа. Метод возвращает true, если в 
+    // массиве  только числа и false в противном случае
+    static void Task4()
+    {
+        object[] objs = { 1, 333, 4, "eg", 975 };
+        bool result = MethodSearch(objs);
+        System.Console.WriteLine(result);
+    }
+    static bool MethodSearch(object[] array)
+    {
+        bool reslut = false;
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] is int number)
+            {
+                reslut = true;
+            }
+            else
+            {
+                reslut = false;
+                break;
+            }
+        }
+        return reslut;
+    }
+    #endregion
 }
+
+
