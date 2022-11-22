@@ -6,6 +6,7 @@
         Task2();
         Task3();
         Task4();
+        Task5();
     }
 
     #region Задача1
@@ -99,6 +100,29 @@
         return reslut;
     }
     #endregion
-}
+    #region Task5 
+    //      На входе n количество элементов массива (вводится с клавиатуры). Далее
+    // производится заполнение массива с слуйчными числами. Реализуйте два метода
+    // для поиска минимального и максимального значения.
+    static void Task5()
+    {
+        int numberareaarray = Convert.ToInt32(Console.ReadLine());
+        int min1 = MinMaxarrayelement(numberareaarray);
+        System.Console.WriteLine(min1);
+    }
+    static int MinMaxarrayelement(int numberareaarray)
+    {
+        int[] array1 = new int[numberareaarray];
+        int min = array1[0];
 
+        for (int i = 0; i < numberareaarray; i++)
+        {
+            array1[i] = new Random().Next();
+            System.Console.WriteLine(array1[i]);
+        }
+        min = array1.Min();
+        return min;
+    }
+    #endregion
+}
 
