@@ -8,6 +8,7 @@
         Task4();
         Task5();
         Task52();
+        Task6();
 
     }
 
@@ -151,7 +152,7 @@
         }
         return min;
     }
-    static int Maxarrayelement(int numberareaarray) //понимаю, что будет новый рандомный ряд, тренировался на том, чтобы более значительные моменты в определение закидывать
+    static int Maxarrayelement(int numberareaarray) //понимаю, что будет новый  рандомный ряд, тренировался на том, чтобы более значительные моменты в определение закидывать
     {
         int[] array1 = new int[numberareaarray];
         int max = array1[0];
@@ -167,4 +168,50 @@
         return max;
     }
     #endregion
+    #region Task6
+    // На входе n – количество элементов массива (вводится с клавиатуры). Далее 
+    // производится заполнение массива с слуйчными числами. Реализуйте методы 
+    // подсчета количества элементов массива меньше и больше среднего значения. 
+    static void Task6()
+    {
+        int numberareaarray = Convert.ToInt32(Console.ReadLine());
+        int sumelement = 0;
+        int[] array = new int[numberareaarray];
+        for (int i = 0; i < numberareaarray; i++)
+        {
+            array[i] = new Random().Next(-100, 100);
+            sumelement += array[i];
+        }
+        int middle = sumelement / numberareaarray;
+        System.Console.WriteLine(string.Join(',', array));
+        System.Console.WriteLine(middle);
+        System.Console.WriteLine(CountLessMiddleNumber(middle, array));
+        System.Console.WriteLine(CountMoreMiddleNumber(middle, array));
+    }
+    static int CountLessMiddleNumber(int middle, int[] array)
+    {
+        int count = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] < middle)
+            {
+                count++;
+            }
+        }
+        return count;
+    }
+    static int CountMoreMiddleNumber(int middle, int[] array)
+    {
+        int count1 = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] > middle)
+            {
+                count1++;
+            }
+        }
+        return count1;
+    }
+    #endregion
 }
+
