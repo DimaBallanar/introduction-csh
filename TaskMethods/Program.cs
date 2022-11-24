@@ -7,6 +7,8 @@
         Task3();
         Task4();
         Task5();
+        Task52();
+
     }
 
     #region Задача1
@@ -124,5 +126,45 @@
         return min;
     }
     #endregion
-}
+    #region Task52
+    static void Task52()
+    {
+        int numberareaarray = Convert.ToInt32(Console.ReadLine());
+        int min1 = MinMaxarrayelement1(numberareaarray);
+        int max1 = Maxarrayelement(numberareaarray);
+        System.Console.WriteLine(min1);
+        System.Console.WriteLine(max1);
+    }
+    static int MinMaxarrayelement1(int numberareaarray)
+    {
+        int[] array1 = new int[numberareaarray];
+        int min = array1[0];
 
+        for (int i = 0; i < numberareaarray; i++)
+        {
+            array1[i] = new Random().Next(-100, 100);
+            System.Console.WriteLine(array1[i]);
+            if (min > array1[i])
+            {
+                min = array1[i];
+            }
+        }
+        return min;
+    }
+    static int Maxarrayelement(int numberareaarray) //понимаю, что будет новый рандомный ряд, тренировался на том, чтобы более значительные моменты в определение закидывать
+    {
+        int[] array1 = new int[numberareaarray];
+        int max = array1[0];
+        for (int i = 0; i < numberareaarray; i++)
+        {
+            array1[i] = new Random().Next(-100, 100);
+            System.Console.WriteLine(array1[i]);
+            if (max < array1[i])
+            {
+                max = array1[i];
+            }
+        }
+        return max;
+    }
+    #endregion
+}
