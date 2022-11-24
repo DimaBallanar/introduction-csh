@@ -9,7 +9,19 @@
         Task5();
         Task52();
         Task6();
+        Task7();
 
+    }
+    static bool MethodIsNumber(object[] array)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] is not int)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     #region Задача1
@@ -212,6 +224,30 @@
         }
         return count1;
     }
+    #endregion
+    #region Task7
+    //     На входе массив. Реализуйте 2 метода. Первый для проверки, что в массиве 
+    // только числа. Второй для получения суммы всех элементов массива. Если 
+    // результат метода проверки – true, то вызывать новый метод, возвращающий 
+    // сумму всех элементов массива
+    static void Task7()
+    {
+        object[] array1 = { 1, 2, 3, 4, 5 };
+        if (MethodIsNumber(array1) == true)
+        {
+            System.Console.WriteLine(SumellemArray(array1));
+        }
+    }
+    static decimal SumellemArray(object[] array)
+    {
+        decimal sum = 0;
+        for (int i = 0; i < array.Length; i++)
+        {
+            sum += Convert.ToDecimal(array[i]);
+        }
+        return sum;
+    }
+
     #endregion
 }
 
