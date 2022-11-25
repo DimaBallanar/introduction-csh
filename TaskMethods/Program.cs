@@ -10,6 +10,7 @@
         Task52();
         Task6();
         Task7();
+        Task8();
 
     }
     static bool MethodIsNumber(object[] array)
@@ -17,6 +18,17 @@
         for (int i = 0; i < array.Length; i++)
         {
             if (array[i] is not int)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+    static bool MethodIsString(object[] array)
+    {
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (array[i] is not string)
             {
                 return false;
             }
@@ -248,6 +260,30 @@
         return sum;
     }
 
+    #endregion
+
+    #region Task 8
+    // На входе массив. Реализуйте 2 метода. Первый для проверки, что в массиве 
+    // только строки. Второй для получения суммы всех строчных элементов массива. 
+    // Если результат метода проверки – true, то вызывать новый метод, возвращающую 
+    // конкатенацию всех строчных элементов массива
+    static void Task8()
+    {
+        object[] array1 = { "dr", "tg", "lf", "ui" };
+        if (MethodIsString(array1) == true)
+        {
+            System.Console.WriteLine(SumellemstringArray(array1));
+        }
+    }
+    static string SumellemstringArray(object[] array)
+    {
+        string sum = "";
+        for (int i = 0; i < array.Length; i++)
+        {
+            sum += array[i] is string str ? str : default;
+        }
+        return sum;
+    }
     #endregion
 }
 
