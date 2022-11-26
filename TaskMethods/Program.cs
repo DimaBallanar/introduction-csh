@@ -11,6 +11,7 @@
         Task6();
         Task7();
         Task8();
+        Task9();
 
     }
     static bool MethodIsNumber(object[] array)
@@ -283,6 +284,71 @@
             sum += array[i] is string str ? str : default;
         }
         return sum;
+    }
+    #endregion
+    #region Task 9 
+    //     +На входе 2 массива, размерность которых вводится с клавиатуры, а значения
+    // заполняются случайными числами+. Реализуйте 2 метода. +Первый что массивы
+    // имеют одинаковую размерность и все элементы отличаются+. Второй произвести
+    // поэлементное умножение. Если результат метода проверки – true, то вызывать
+    //     // новый метод, возвращающий вывод элементов через запятую 
+    // +Ты размерность ввводишь с клавиатуры для первогоо массива (длинна массива) и для второго массива
+    // 1 метод сравниваешь длинну, чтоьы одинаковые были и вск элементы по индексам i элемент 1 и 2 массива 
+    // если длинны одинаковые и элемнты разные, то вызываешь метод 
+    // который создаёт новый массив в который записывает в i позицию произведение i элементов 1 и 2 массива
+    static void Task9()
+    {
+        System.Console.WriteLine("Task9");
+        int boardarray = Convert.ToInt32(Console.ReadLine());
+        int boardarray1 = Convert.ToInt32(Console.ReadLine());
+        int[] array = new int[boardarray];
+        int[] array1 = new int[boardarray1];
+        for (int i = 0; i < boardarray; i++)
+        {
+            array[i] = new Random().Next(-100, 100);
+        }
+        for (int i = 0; i < boardarray1; i++)
+        {
+            array1[i] = new Random().Next(-100, 100);
+        }
+        if (Comparison(array, array1) == true)
+        {
+            int[] array0 = MultiplicationIndexs(array, array1);
+            string str = string.Join(',', array0);
+            System.Console.WriteLine(str);
+        }
+
+
+        static bool Comparison(int[] massiv, int[] massiv1)
+        {
+            bool result = false;
+            if (massiv.Length == massiv1.Length)
+            {
+                for (int i = 0; i < massiv.Length; i++)
+                {
+                    if (massiv[i] != massiv1[i])
+                    {
+                        result = true;
+                    }
+                    else if (massiv[i] == massiv1[i])
+                    {
+                        result = false;
+                    }
+                }
+            }
+            else { System.Console.WriteLine("Введите одинаковую длинну массива"); }
+            return result;
+        }
+        static int[] MultiplicationIndexs(int[] massiv, int[] massiv1)
+        {
+            int[] array0 = new int[massiv.Length];
+            for (int i = 0; i < massiv.Length; i++)
+            {
+                array0[i] = (Convert.ToInt32(massiv[i]) * Convert.ToInt32(massiv1[i]));
+                System.Console.WriteLine(array0[i]);
+            }
+            return array0;
+        }
     }
     #endregion
 }
