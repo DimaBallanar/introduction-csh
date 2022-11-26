@@ -12,6 +12,7 @@
         Task7();
         Task8();
         Task9();
+        Task10();
 
     }
     static bool MethodIsNumber(object[] array)
@@ -349,6 +350,46 @@
             }
             return array0;
         }
+    }
+    #endregion
+    #region Task10
+    //     На входе массив. Реализуйте 2 метода. Первый для проверки, что в массиве
+    // только числа. Второй для получения только четных элементов массива. Если
+    // результат метода проверки – true, то вызывать новую метод, возвращающий
+    // массив с четными элементами массива
+
+
+    static void Task10()
+    {
+        System.Console.WriteLine("Task10");
+        string[] array = { "2", "1", "432", "468", "896" };
+        if (IsNumber1(array) == true)
+        {
+            System.Console.WriteLine(string.Join(',', IsEvenNumbered(array)));
+        }
+    }
+
+    static bool IsNumber1(string[] massiv)
+    {
+        bool result = false;
+        for (int i = 0; i < massiv.Length; i++)
+        {
+            result = Convert.ToInt32(massiv[i]) is int number ? true : false;
+        }
+        return result;
+
+    }
+    static string[] IsEvenNumbered(string[] massiv)
+    {
+        string[] array0 = new string[massiv.Length];
+        for (int i = 0; i < massiv.Length; i++)
+        {
+            if (Convert.ToInt32(massiv[i]) % 2 == 0)
+            {
+                array0[i] = massiv[i];
+            }
+        }
+        return array0;
     }
     #endregion
 }
