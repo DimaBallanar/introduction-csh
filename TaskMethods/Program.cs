@@ -13,6 +13,7 @@
         Task8();
         Task9();
         Task10();
+        Task11();
 
     }
     static bool MethodIsNumber(object[] array)
@@ -390,6 +391,26 @@
             }
         }
         return array0;
+    }
+    #endregion
+        #region Task11
+
+    // На входе число.Необходимо создать метод, возвращающий факториал числа.
+    // Пример фактериала 4! = 1 * 2 * 3 * 4
+    static void Task11()
+    {
+        System.Console.WriteLine("Task11");
+        int chislo = Convert.ToInt32(Console.ReadLine());
+        System.Console.WriteLine(Factorial(chislo));
+    }
+    static int Factorial(int number)
+    {
+        int chislo1 = 1;
+        for (int i = 1; i <= number; i++)
+        {
+            chislo1 *= i;
+        }
+        return chislo1;
     }
     #endregion
 }
