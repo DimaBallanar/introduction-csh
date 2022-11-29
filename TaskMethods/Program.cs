@@ -14,6 +14,7 @@
         Task9();
         Task10();
         Task11();
+        Task12();
 
     }
     static bool MethodIsNumber(object[] array)
@@ -43,6 +44,7 @@
     // Пользователь вводит имя и фамилию. Необходимо создать метод возвращающую строку вида «Привет, {имя} {фамилия}»
     static void Task1()
     {
+        System.Console.WriteLine("Task1");
         System.Console.WriteLine("введите имя");
         string? name = Console.ReadLine();
         System.Console.WriteLine("введите фамилию");
@@ -61,6 +63,7 @@
     // hschool company --> Hschool C ompany
     static void Task2()
     {
+        System.Console.WriteLine("Task2");
         string? str = Console.ReadLine();
         System.Console.WriteLine(ConverterString(str));
     }
@@ -84,6 +87,7 @@
     //  [“by”, “belarus”, “de”, “ru”, “germany”] -> [“by”, “de”, “ru”]
     static void Task3()
     {
+        System.Console.WriteLine("Task3");
         string[] text = { "by", "belarus", "de", "ru", "germany" };
         Console.WriteLine(string.Join(",", MethodReplace(text)));
     }
@@ -108,6 +112,7 @@
     // массиве  только числа и false в противном случае
     static void Task4()
     {
+        System.Console.WriteLine("Task4");
         object[] objs = { 1, 333, 4, "eg", 975 };
         bool result = MethodSearch(objs);
         System.Console.WriteLine(result);
@@ -136,6 +141,7 @@
     // для поиска минимального и максимального значения.
     static void Task5()
     {
+        System.Console.WriteLine("Task5");
         int numberareaarray = Convert.ToInt32(Console.ReadLine());
         int min1 = MinMaxarrayelement(numberareaarray);
         System.Console.WriteLine(min1);
@@ -157,6 +163,7 @@
     #region Task52
     static void Task52()
     {
+        System.Console.WriteLine("Task52");
         int numberareaarray = Convert.ToInt32(Console.ReadLine());
         int min1 = MinMaxarrayelement1(numberareaarray);
         int max1 = Maxarrayelement(numberareaarray);
@@ -201,6 +208,7 @@
     // подсчета количества элементов массива меньше и больше среднего значения. 
     static void Task6()
     {
+        System.Console.WriteLine("Task6");
         int numberareaarray = Convert.ToInt32(Console.ReadLine());
         int sumelement = 0;
         int[] array = new int[numberareaarray];
@@ -247,6 +255,7 @@
     // сумму всех элементов массива
     static void Task7()
     {
+        System.Console.WriteLine("Task7");
         object[] array1 = { 1, 2, 3, 4, 5 };
         if (MethodIsNumber(array1) == true)
         {
@@ -272,6 +281,7 @@
     // конкатенацию всех строчных элементов массива
     static void Task8()
     {
+        System.Console.WriteLine("Task8");
         object[] array1 = { "dr", "tg", "lf", "ui" };
         if (MethodIsString(array1) == true)
         {
@@ -393,7 +403,7 @@
         return array0;
     }
     #endregion
-        #region Task11
+    #region Task11
 
     // На входе число.Необходимо создать метод, возвращающий факториал числа.
     // Пример фактериала 4! = 1 * 2 * 3 * 4
@@ -411,6 +421,48 @@
             chislo1 *= i;
         }
         return chislo1;
+    }
+    #endregion
+
+    #region Task12
+    //     На входе строка. Необходимо создать метод, возвращающий true, если это слово
+    // палиндром и false в противном случае
+    // Task12
+    //     На входе строка. Необходимо создать метод, возвращающий true, если это слово
+    // палиндром и false в противном случае
+    static void Task12()
+    {
+        System.Console.WriteLine("Task12");
+        string str1 = "frerf";
+        if (Ren(str1) == true)
+        {
+            System.Console.WriteLine(true);
+        }
+        else { System.Console.WriteLine(false); }
+    }
+    static bool Ren(string str)
+    {
+        char[] array = new char[str.Length];
+        bool result = false;
+        for (int i = 0; i < str.Length; i++)
+        {
+            array[i] = Convert.ToChar(str[i]);
+        }
+        string[] array1 = new string[str.Length];
+        for (int i = 0; i < str.Length; i++)
+        {
+            array1[i] = Convert.ToString(str[i]);
+        }
+        string[] array2 = array1.Reverse().ToArray();
+        for (int i = 0; i < str.Length; i++)
+        {
+
+            if (array1[i] == array2[i])
+            {
+                result = true;
+            }
+        }
+        return result;
     }
     #endregion
 }
