@@ -7,6 +7,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
             Task1();
+            Task7();
+
         }
 
         #region Task1 
@@ -16,6 +18,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
 
         static void Task1()
         {
+            System.Console.WriteLine("Task1");
             int n = Convert.ToInt32(Console.ReadLine());
             System.Console.WriteLine(NumberFB(n));
         }
@@ -26,9 +29,52 @@ namespace MyApp // Note: actual namespace depends on the project name.
             return NumberFB(n - 2) + NumberFB(n - 1);
         }
         #endregion
-    }
+        #region Task7
+        static void Task7()
+        {
+            System.Console.WriteLine("Task7");
+            string? text = Console.ReadLine();
+            string? symbol = Console.ReadLine();
+            if (!string.IsNullOrEmpty(text) && !string.IsNullOrEmpty(symbol))
+            {
+                Console.WriteLine(MethodAllSearch(text, symbol));
+            }
+            else
+            {
+                Console.WriteLine("error");
+            }
+        }
 
+        static (string, int, int, int) MethodAllSearch(string text, string symbol)
+        {
+            int count = 0;
+            int indexFirst = -1;
+            int indexLast = -1;
+            int LengthSymbol = symbol.Length;
+            for (int i = 0; i <= text.Length - LengthSymbol; i++)
+            {
+                string temp = "";
+                for (int j = i; j <= i + (LengthSymbol - 1); j++)
+                {
+                    temp += text[j];
+                }
+                if (temp == symbol)
+                {
+                    if (indexFirst == -1)
+                    {
+                        indexFirst = i;
+                    }
+                    indexLast = i;
+                    count++;
+                }
+            }
+            return (symbol, count, indexFirst, indexLast);
+        }
+        #endregion
+    }
 }
+
+
 
 
 
