@@ -15,6 +15,7 @@
         Task10();
         Task11();
         Task12();
+        Task13();
 
     }
     static bool MethodIsNumber(object[] array)
@@ -460,6 +461,44 @@
             if (array1[i] == array2[i])
             {
                 result = true;
+            }
+        }
+        return result;
+    }
+    #endregion
+
+    #region Task13
+    //  На входе строка. Необходимо создать метод, возвращающий true, если это слово
+    // анаграмма и false в противном случае
+
+    static void Task13()
+    {
+        System.Console.WriteLine("Task13");
+        string str = "getg";
+        string str1 = "tgeg";
+        System.Console.WriteLine(StrAnagrama(str, str1));
+    }
+    static bool StrAnagrama(string stroka, string stroka1)
+    {
+        bool result = true;
+        string[] array = new string[stroka.Length];
+        string[] array1 = new string[stroka1.Length];
+        if (stroka.Length == stroka1.Length)
+        {
+            for (int i = 0; i < stroka1.Length; i++)
+            {
+                array[i] = Convert.ToString(stroka[i]);
+                array1[i] = Convert.ToString(stroka1[i]);
+            }
+        }
+        Array.Sort(array);
+        Array.Sort(array1);
+
+        for (int i = 0; i < stroka.Length; i++)
+        {
+            if (array[i] != array1[i])
+            {
+                result = false;
             }
         }
         return result;
