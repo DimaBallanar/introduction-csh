@@ -17,6 +17,7 @@
         Task12();
         Task13();
         Task14();
+        Task15();
 
     }
     static bool MethodIsNumber(object[] array)
@@ -534,5 +535,78 @@
         return raznost;
     }
     #endregion
+    #region Task 15
+    //     Реазуйте методы перевода чисел из десятичной системы счисления в 2-ую и 16-
+    // ую
+    static void Task15()
+    {
+        int number = Convert.ToInt32(Console.ReadLine());
+        System.Console.WriteLine(MethodConvertto2(number));
+        System.Console.WriteLine(MethodConvertto16(number));
+    }
+    static string MethodConvertto2(int number)
+    {
+        int ostatokotdel = 0;
+        string numberin2 = "";
+        string numberin2right = "0";
+        while (number >= 1)
+        {
+            ostatokotdel = number % 2;
+            numberin2 += ostatokotdel;
+            number = number / 2;
+        }
+        for (int j = numberin2.Length - 1; j >= 0; j--)
+        {
+            numberin2right += numberin2[j];
+        }
+        return numberin2right;
+    }
+    static string MethodConvertto16(int number)
+    {
+        int ostatokotdel = 0;
+        string numberin2 = "";
+        string numberin2right = "";
+        while (number >= 1)
+        {
+            ostatokotdel = number % 16;
+            if (ostatokotdel == 10)
+            {
+                numberin2 += "A";
+            }
+            else if (ostatokotdel == 11)
+            {
+                numberin2 += "B";
+            }
+            else if (ostatokotdel == 12)
+            {
+                numberin2 += "C";
+            }
+            else if (ostatokotdel == 13)
+            {
+                numberin2 += "D";
+            }
+            else if (ostatokotdel == 14)
+            {
+                numberin2 += "E";
+            }
+            else if (ostatokotdel == 15)
+            {
+                numberin2 += "F";
+            }
+            else
+            {
+                numberin2 += ostatokotdel;
+            }
+            number = number / 16;
+        }
+        for (int j = numberin2.Length - 1; j >= 0; j--)
+        {
+            numberin2right += numberin2[j];
+            System.Console.WriteLine(numberin2right);
+        }
+        return numberin2right;
+    }
+    #endregion
 }
+
 
