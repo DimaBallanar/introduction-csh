@@ -16,6 +16,7 @@
         Task11();
         Task12();
         Task13();
+        Task14();
 
     }
     static bool MethodIsNumber(object[] array)
@@ -502,6 +503,35 @@
             }
         }
         return result;
+    }
+    #endregion
+
+    #region Task14
+    //     Реализовать метод возвращающий разность между НОК и НОД для двух чисел
+    static void Task14()
+    {
+        int number1 = Convert.ToInt32(Console.ReadLine());
+        int number2 = Convert.ToInt32(Console.ReadLine());
+        System.Console.WriteLine(DifferenceNokAndNod(number1, number2));
+    }
+    static int DifferenceNokAndNod(int number, int number1)
+    {
+        int nod = 0;
+        int nok = 0;
+        int raznost = 0;
+        int gran = number * number1;
+        for (int i = 1; i <= gran; i++)
+        {
+            if (number % i == 0 && number1 % i == 0)
+            {
+                nod = i;
+            }
+        }
+        System.Console.WriteLine(nod);
+        nok = number * number1 / nod;
+        System.Console.WriteLine(nok);
+        raznost = nok - nod;
+        return raznost;
     }
     #endregion
 }
