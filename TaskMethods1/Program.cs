@@ -4,7 +4,8 @@
     {
         Task1();
         Task2();
-        // Task3();
+        Task3();
+        //Task4();
     }
     #region Task1
 
@@ -57,6 +58,29 @@
         return domen;
         return result;
 
+    }
+    #endregion
+    #region Task3
+    //     Написать метод , который удаляет из строки заданный символ. Символ является
+    // входным параметром значением. Строка должна быть параметром ссылкой и
+    // результатом. (ref)
+    static void Task3()
+    {
+        string str = "etigkvbnvrew";
+        char symbol = Convert.ToChar(Console.ReadLine());
+        System.Console.WriteLine(DeleteSymbol(ref str, symbol));
+    }
+
+    static string DeleteSymbol(ref string str, char symbol)
+    {
+        for (int i = 0; i < str.Length; i++)
+        {
+            if (str[i] == symbol)
+            {
+                str = str.Remove(i, 1);
+            }
+        }
+        return str;
     }
     #endregion
 }
