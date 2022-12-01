@@ -3,7 +3,7 @@
     static void Main(string[] args)
     {
         Task1();
-        // Task2();
+        Task2();
         // Task3();
     }
     #region Task1
@@ -32,5 +32,31 @@
         return podschet;
     }
 
+    #endregion
+
+
+
+    #region Task2
+    //     Написать метод, который проверяет является ли введнная строка почтовым
+    // адрессом и возвращающий домен почты. почты.(Out)
+    static void Task2()
+    {
+        string email = "rtty@gmail.com";
+        TryFalseEmail(email, out string result, out string domen);
+        System.Console.WriteLine($"{domen},{result}");
+    }
+    static string TryFalseEmail(string email, out string result, out string domen)
+    {
+        domen = "";
+        result = "false";
+        if (email.Contains("@gmail.com"))
+        {
+            domen = "@gmail.com";
+            result = "true";
+        }
+        return domen;
+        return result;
+
+    }
     #endregion
 }
