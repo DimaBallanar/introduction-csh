@@ -6,7 +6,7 @@
         Task2();
         Task3();
         Task4();
-        // Task5();
+        Task5();
         // Task6();
     }
     #region Task1
@@ -122,6 +122,30 @@
         }
         return sumparametr;
         return itog;
+    }
+    #endregion
+    #region Task5
+    //     Пользователь вводит строку и разделитель. Написать метод возвращающий
+    // наличие в строке разделителя, если разделитель есть вернуть строку разбитую
+    // данным разделителем ( out)
+    static void Task5()
+    {
+        System.Console.WriteLine("Task5");
+        string? str = Console.ReadLine();
+        string? razd = Console.ReadLine();
+        if (!string.IsNullOrEmpty(str) && !string.IsNullOrEmpty(razd))
+        {
+            System.Console.WriteLine(ProverkaNaRazd(str, razd, out string str1));
+        }
+    }
+    static string ProverkaNaRazd(string str, string razd, out string str1)
+    {
+        str1 = "";
+        if (str.Contains(razd))
+        {
+            str1 = string.Join(' ', str.Split(razd));
+        }
+        return str1;
     }
     #endregion
 }
