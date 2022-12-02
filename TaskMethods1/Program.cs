@@ -5,7 +5,9 @@
         Task1();
         Task2();
         Task3();
-        //Task4();
+        Task4();
+        // Task5();
+        // Task6();
     }
     #region Task1
 
@@ -81,6 +83,45 @@
             }
         }
         return str;
+    }
+    #endregion
+
+    #region Task4
+    //     Написать метод выполняющий сложение парметов, если параметры одного типа
+    // данных возвращать true и результат сложение, в противном случае false (out)
+    static void Task4()
+    {
+        object? parametr = "5";
+        object? parametr1 = "16";
+        ProverkaParametr(parametr, parametr1, out string itog, out string sumparametr);
+        System.Console.WriteLine($"{itog},{sumparametr}");
+
+
+    }
+    static string ProverkaParametr(object parametr, object parametr1, out string itog, out string sumparametr)
+    {
+        itog = "false";
+        sumparametr = "";
+        int number;
+        int number1;
+        TypeCode typeCode = Type.GetTypeCode(parametr.GetType());
+        System.Console.WriteLine(typeCode);
+        if (parametr is string && parametr1 is string)
+        {
+            sumparametr += parametr;
+            sumparametr += parametr1;
+            itog = "true";
+        }
+        else if (parametr is int && parametr1 is int)
+        {
+            number = Convert.ToInt32(parametr);
+            number1 = Convert.ToInt32(parametr1);
+            int sumnumber = number + number1;
+            sumparametr += Convert.ToString(sumnumber);
+            itog = "true";
+        }
+        return sumparametr;
+        return itog;
     }
     #endregion
 }
