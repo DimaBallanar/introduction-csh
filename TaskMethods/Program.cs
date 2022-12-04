@@ -18,6 +18,7 @@
         Task13();
         Task14();
         Task15();
+        Task152();
 
     }
     static bool MethodIsNumber(object[] array)
@@ -605,6 +606,33 @@
             System.Console.WriteLine(numberin2right);
         }
         return numberin2right;
+    }
+    #endregion
+    #region Task 15
+    //     Реазуйте методы перевода чисел из десятичной системы счисления в 2-ую и 16-ую
+    static void Task152()
+    {
+        object[] array16 = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, "A", "B", "C", "D", "E", "F" };
+        object[] array2 = { 0, 1 };
+        int number = Convert.ToInt32(Console.ReadLine());
+        System.Console.WriteLine(MetrhodConvertNumberic(number, array16));
+        System.Console.WriteLine(MetrhodConvertNumberic(number, array2));
+
+
+    }
+    static string MetrhodConvertNumberic(int number, object[] array)
+    {
+        string numberin = "";
+
+        while (number >= 1)
+        {
+            numberin += array[number % array.Length].ToString();
+            number /= array.Length;
+        }
+        return new string(numberin.Reverse().ToArray());
+
+        // number % array.Length
+
     }
     #endregion
 }
