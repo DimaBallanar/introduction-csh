@@ -7,7 +7,8 @@
         Task3();
         Task4();
         Task5();
-        // Task6();
+        Task6();
+        //Task7();
     }
     #region Task1
 
@@ -148,4 +149,36 @@
         return str1;
     }
     #endregion
+        #region Task6
+    //     Написать метод возвращающий разность между найбольшим и наименьшим
+    // значением из списка. Результат разности возращать через out , метод для поиска
+    // минимального и максимального написать с использованием params
+    static void Task6()
+    {
+        int[] array = { 1, 2, 3, 4, 5, 6, 7 };
+        Defenation(out int def, array);
+        System.Console.WriteLine(def);
+    }
+    static int Defenation(out int def, params int[] array)
+    {
+        int min = array[0];
+        int max = array[0];
+        for (int i = 0; i < array.Length; i++)
+        {
+            if (min > array[i])
+            {
+                min = array[i];
+            }
+            if (max < array[i])
+            {
+                max = array[i];
+            }
+        }
+        System.Console.WriteLine(max);
+        System.Console.WriteLine(min);
+        def = max - min;
+        return def;
+    }
+    #endregion
+
 }
