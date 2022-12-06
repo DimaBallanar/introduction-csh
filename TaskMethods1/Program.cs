@@ -8,7 +8,8 @@
         Task4();
         Task5();
         Task6();
-        //Task7();
+        Task7();
+        //Task8();
     }
     #region Task1
 
@@ -149,7 +150,7 @@
         return str1;
     }
     #endregion
-        #region Task6
+    #region Task6
     //     Написать метод возвращающий разность между найбольшим и наименьшим
     // значением из списка. Результат разности возращать через out , метод для поиска
     // минимального и максимального написать с использованием params
@@ -180,5 +181,50 @@
         return def;
     }
     #endregion
+    #region Task7
+    //     Написать метод который принимает строку, если строка содержит только 0 и 1
+    // вернуть true , а 0 и 1 перевести в 10 ную систему счисления, в противном случае
+    // false out)
+    static void Task7()
+    {
+        string? str = Console.ReadLine();
+        if (!string.IsNullOrEmpty(str))
+        {
+            ValidationStr(str, out string is01, out string number);
+            System.Console.WriteLine($"{is01}, {number}");
+        }
+    }
+    static string ValidationStr(string str, out string is01, out string number)
+    {
+        int i = 0;
+        is01 = "false";
+        string str1 = "";
+        double k = 0;
+        double h = 0;
+        number = "";
+        while (i < str.Length)
+        {
+            if (str[i] == '0' || str[i] == '1')
+            {
+                is01 = "true";
+                str1 += str[i];
+            }
+            i++;
+        }
+        // 101
+        i = 0;
+        for (int j = str1.Length - 1; j >= 0; j--)
+        {
+            k = Convert.ToDouble(str1[j].ToString());
+            k = k * Math.Pow(2, i);
+            h += k;
+            System.Console.WriteLine(h);
+            i++;
+        }
+        number += h.ToString();
+        return is01;
+        return number;
 
+        #endregion
+    }
 }
