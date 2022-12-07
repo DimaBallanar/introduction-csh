@@ -9,7 +9,7 @@
         Task5();
         Task6();
         Task7();
-        //Task8();
+        Task8();
     }
     #region Task1
 
@@ -224,7 +224,37 @@
         number += h.ToString();
         return is01;
         return number;
-
-        #endregion
     }
+    #endregion
+    #region Task8
+    // На входе метода набор 0 и 1 перевести в 16 ную систему счисления ( params)
+    static void Task8()
+    {
+        System.Console.WriteLine("Task8");
+        string? str = Console.ReadLine();
+        char[] array = new char[str.Length - 1];
+        if (!string.IsNullOrEmpty(str))
+        {
+            array = str.ToCharArray();
+            // for (int i =0; i<array.Length;i++)
+            // {
+            // System.Console.WriteLine(array[i]);
+            // }
+            System.Console.WriteLine(ConvertOf2To16(array));
+        }
+        else
+        {
+            System.Console.WriteLine("Вы ввели пустоту или налл");
+        }
+        static string ConvertOf2To16(params char[] array)
+        {
+            int chislov10 = 0;
+            string str1 = string.Join("", array);
+            System.Console.WriteLine(str1);
+            chislov10 = Convert.ToInt32(str1, 2);
+            str1 = Convert.ToString(chislov10, 16);
+            return str1;
+        }
+    }
+    #endregion
 }
