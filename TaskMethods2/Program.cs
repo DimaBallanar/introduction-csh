@@ -7,6 +7,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
             Task1();
+            Task2();
         }
 
         #region Task1 
@@ -41,6 +42,57 @@ namespace MyApp // Note: actual namespace depends on the project name.
             "/" => MethodDivision(number1, number2).ToString(),
             _ => string.Format("No resultations {0}", opr)
         };
+        #endregion
+        #region Task2 
+        //     Написать метод по рассчету средней скорости на участке и выводе сообщения
+        // превысил водитель скорость или нет. Метод должен принимать во сколько
+        // водитель въехал в участок контроля скорости и время во сколько выехал из
+        // участка, в виде HH:MM:SS , длинну учатска контроля скорости и среднюю
+        // допустимую скорость участка
+        // В задаче использовать необязательные парметры, локальные методы.
+        // время въезда+
+        // время выезда+
+        // длина участка контроля+
+        // средняя допустимая скорость+
+        static void Task2()
+        {
+            System.Console.WriteLine("TASK2");
+            string? timein = Console.ReadLine();
+            string? timeout = Console.ReadLine();
+            double lengthroad = Convert.ToDouble(Console.ReadLine());
+            if (!string.IsNullOrEmpty(timein) && !string.IsNullOrEmpty(timeout))
+            {
+                Averagespeed(timein, timeout, lengthroad, out string speedonlengthroadout, out string message);
+                System.Console.WriteLine($"{speedonlengthroadout},{message}");
+            }
+            else
+            {
+                System.Console.WriteLine("Вы ввели пустоту или налл");
+            }
+        }
+        static string Averagespeed(string timein, string timeout, double lengthroad, out string speedonlengthroadout, out string message, double maxspeed = 110)
+        {
+            message = "Speed <110";
+            double timeitog = 0;
+            Timeitogmethod(timein, timeout);
+            double speedonlengthroad = lengthroad / (timeitog / 3600);
+            if (speedonlengthroad > 110)
+            {
+                message = "Speed >110";
+            }
+            double Timeitogmethod(string timein, string timeout)
+            {
+                string[] timeinarray = timein.Split(":");
+                string[] timeoutarray = timeout.Split(":");
+                double hh = Convert.ToDouble(timeoutarray[0]) - Convert.ToDouble(timeinarray[0]);
+                double mm = Convert.ToDouble(timeoutarray[1]) - Convert.ToDouble(timeinarray[1]);
+                double ss = Convert.ToDouble(timeoutarray[2]) - Convert.ToDouble(timeinarray[2]);
+                timeitog = hh * 3600 + mm * 60 + ss;
+                return timeitog;
+            }
+            speedonlengthroadout = speedonlengthroad.ToString();
+            return speedonlengthroadout;
+        }
         #endregion
     }
 
