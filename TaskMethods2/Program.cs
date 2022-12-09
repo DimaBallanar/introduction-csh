@@ -8,6 +8,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         {
             Task1();
             Task2();
+            Task3();
         }
 
         #region Task1 
@@ -17,6 +18,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         // с использованием тернарного switch в методе.
         static void Task1()
         {
+            System.Console.WriteLine("Task1");
             int number1;
             number1 = 5;
             int number2 = 13;
@@ -94,8 +96,35 @@ namespace MyApp // Note: actual namespace depends on the project name.
             return speedonlengthroadout;
         }
         #endregion
+        #region Task3
+        //     Написать метод увеличению размера массива и заполнения его значениями
+        // В задаче использовать необязательные парметры, локальные методы
+        static void Task3()
+        {
+            System.Console.WriteLine("Task3");
+            int[] array = new int[1] { 1 };
+            int[] array1 = new int[3] { 2, 3, 4 };
+            int[] arraynew = new int[4];
+            ArrayRise(array, array1, arraynew);
+            System.Console.WriteLine(string.Join(',', arraynew));
+        }
+        static int[] ArrayRise(int[] array, int[] array1, int[] arraynew, int arrayLength = 1, int arrayLength1 = 3)
+        {
+            Arraynew();
+            int[] Arraynew()
+            {
+                Array.Copy(array, arraynew, array.Length);
+                array1.CopyTo(arraynew, 1);
+                System.Console.WriteLine(arraynew[0]);
+                System.Console.WriteLine(arraynew[1]);
+                System.Console.WriteLine(arraynew[2]);
+                System.Console.WriteLine(arraynew[3]);
+                return arraynew;
+            }
+            return arraynew;
+        }
+        #endregion
     }
-
 }
 
 
