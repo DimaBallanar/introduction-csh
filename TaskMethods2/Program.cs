@@ -9,6 +9,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Task1();
             Task2();
             Task3();
+            Task4();
         }
 
         #region Task1 
@@ -122,6 +123,56 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 return arraynew;
             }
             return arraynew;
+        }
+        #endregion
+        #region Task4
+        // Написать метод по расчету корней квадратного уравнения с использованием
+        // локального метода
+        static void Task4()
+        {
+            double a = Convert.ToDouble(Console.ReadLine());
+            double b = Convert.ToDouble(Console.ReadLine());
+            double c = Convert.ToDouble(Console.ReadLine());
+            SearchKor(a, b, c, out double iks, out double iks1);
+            System.Console.WriteLine($"{iks},{iks1}");
+
+        }
+        static bool SearchKor(double a, double b, double c, out double iks, out double iks1)
+        {
+            double d;
+            double z;
+            double z1;
+            Searchd();
+            Console.WriteLine($"{d}");
+
+            if (d > 0)
+            {
+                z = (-b - Math.Sqrt(d)) / 2 * a;
+                z1 = (-b + Math.Sqrt(d)) / 2 * a;
+                iks = Math.Max(z, z1);
+                iks1 = Math.Min(z, z1);
+                Console.WriteLine($"{iks},{iks1}");
+                return true;
+            }
+            else if (d == 0)
+            {
+                iks = (-b - Math.Sqrt(d)) / 2 * a;
+                Console.WriteLine($"{iks}");
+                iks1 = default;
+                return true;
+            }
+            else
+            {
+                Console.WriteLine("No korney");
+                iks = default;
+                iks1 = default;
+                return false;
+            }
+            double Searchd()
+            {
+                d = Math.Pow(b, 2) - 4 * a * c;
+                return d;
+            }
         }
         #endregion
     }
