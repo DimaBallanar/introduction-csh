@@ -8,6 +8,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         {
             Task1();
             Task2();
+            Task3();
             Task7();
 
         }
@@ -91,6 +92,56 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 }
             }
             return (symbol, count, indexFirst, indexLast);
+        }
+        #endregion
+        #region Task3 
+        //     Дано натуральное число больше 1 (вводится с Выведите все простые
+        // делители этого числа используя рекурсию
+        static void Task3()
+        {
+            System.Console.WriteLine("Task3");
+            int number = Convert.ToInt32(Console.ReadLine());
+            int count = 0;
+            System.Console.WriteLine(SearchSimpleNumber(ref number, ref count));
+        }
+        static int SearchSimpleNumber(ref int number, ref int count)
+        {
+
+            if (number > 1 && count == 0)
+            {
+                count++;
+                System.Console.WriteLine(1);
+                return SearchSimpleNumber(ref number, ref count);
+            }
+            if (number % 2 == 0)
+            {
+                number = number / 2;
+                count++;
+                System.Console.WriteLine(2);
+                return SearchSimpleNumber(ref number, ref count);
+            }
+            if (number % 3 == 0)
+            {
+                number = number / 3;
+                count++;
+                System.Console.WriteLine(3);
+                return SearchSimpleNumber(ref number, ref count);
+            }
+            if (number % 5 == 0)
+            {
+                number = number / 5;
+                count++;
+                System.Console.WriteLine(5);
+                return SearchSimpleNumber(ref number, ref count);
+            }
+            if (number % 7 == 0)
+            {
+                number = number / 7;
+                count++;
+                System.Console.WriteLine(7);
+                return SearchSimpleNumber(ref number, ref count);
+            }
+            return count;
         }
         #endregion
     }
