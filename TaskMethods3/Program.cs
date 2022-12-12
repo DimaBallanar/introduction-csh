@@ -7,6 +7,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
         static void Main(string[] args)
         {
             Task1();
+            Task2();
             Task7();
 
         }
@@ -27,6 +28,27 @@ namespace MyApp // Note: actual namespace depends on the project name.
         {
             if (n <= 1) { return n; }
             return NumberFB(n - 2) + NumberFB(n - 1);
+        }
+        #endregion
+        #region Task2
+        //Дано натуральное число (вводится с клавиатуры). Вычислите сумму его цифр
+        // используя рекурсию
+        static void Task2()
+        {
+            System.Console.WriteLine("Task2");
+            int number = Convert.ToInt32(Console.ReadLine());
+            System.Console.WriteLine(SumNumber(number));
+        }
+        static int SumNumber(int number)
+        {
+
+            int sum = 0;
+            if (number == 0)
+            {
+                return sum;
+            }
+            sum = number % 10 + SumNumber(number / 10);
+            return sum;
         }
         #endregion
         #region Task7
