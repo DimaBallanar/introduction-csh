@@ -9,6 +9,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Task1();
             Task2();
             Task3();
+            Task4();
             Task7();
 
         }
@@ -142,6 +143,34 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 return SearchSimpleNumber(ref number, ref count);
             }
             return count;
+        }
+        #endregion
+        #region Task4
+        static void Task4()
+        {
+            System.Console.WriteLine("Task4");
+            double number = double.Parse(Console.ReadLine());
+
+            System.Console.WriteLine(Degree2(ref number));
+        }
+        static double Degree2(ref double number)
+        {
+            string itog = "«Not degree 2»";
+            if (number == 1)
+            {
+                System.Console.WriteLine("«degree 2»");
+                return 1;
+            }
+            else if (number > 1 && number < 2)
+            {
+                System.Console.WriteLine("«Not degree 2»");
+                return -1;
+            }
+            else
+            {
+                number = number / 2;
+                return Degree2(ref number);
+            }
         }
         #endregion
     }
