@@ -6,12 +6,12 @@ namespace MyApp // Note: actual namespace depends on the project name.
     {
         static void Main(string[] args)
         {
-            Task1();
-            Task2();
-            Task3();
-            Task4();
+            // Task1();
+            // Task2();
+            // Task3();
+            // Task4();
             Task5();
-            Task7();
+            // Task7();
 
         }
 
@@ -211,6 +211,8 @@ namespace MyApp // Note: actual namespace depends on the project name.
             System.Console.WriteLine("Task5");
             int[] arraytask5 = new int[5] { 1, 2, 6, 7, 9 };
             System.Console.WriteLine(MetodReturnIndex(arraytask5));
+            OutFindMinMax(arraytask5, out int minnumberindex, out int maxnumberindex);
+            System.Console.WriteLine($"indexMin-{minnumberindex},indexMax-{maxnumberindex}");
         }
         static (int, int) MetodReturnIndex(int[] array)
         {
@@ -230,6 +232,24 @@ namespace MyApp // Note: actual namespace depends on the project name.
                 }
             }
             return (maxnumberindex, minnumberindex);
+        }
+        static void OutFindMinMax(int[] massiv, out int minnumberindex, out int maxnumberindex)
+        {
+            maxnumberindex = 0;
+            minnumberindex = 0;
+            int maxnumber = massiv[0];
+            int minnumber = massiv[0];
+            for (int i = 1; i < massiv.Length; i++)
+            {
+                if (maxnumber < massiv[i])
+                {
+                    minnumberindex = i;
+                }
+                if (minnumber > massiv[i])
+                {
+                    maxnumberindex = i;
+                }
+            }
         }
         #endregion
     }
