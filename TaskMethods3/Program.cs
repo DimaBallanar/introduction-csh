@@ -10,6 +10,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             Task2();
             Task3();
             Task4();
+            Task5();
             Task7();
 
         }
@@ -173,7 +174,7 @@ namespace MyApp // Note: actual namespace depends on the project name.
             }
         }
         #endregion
-                //         Дано натуральное число больше 1 (вводится с клавиатуры). Выведите «Точная
+        //         Дано натуральное число больше 1 (вводится с клавиатуры). Выведите «Точная
         // степень двойки», если число является точной степенью двойки, или «Не
         // являеться степенью двойки», в противном случае используя рекурсию
         // #region Task4
@@ -202,7 +203,35 @@ namespace MyApp // Note: actual namespace depends on the project name.
         //     return -1;
         // }
         // #endregion
-        
+        #region Task5
+        //     Написать метод возвращающий индекс максимального и минимального
+        // значения массива (два способа используя кортеж и out)
+        static void Task5()
+        {
+            System.Console.WriteLine("Task5");
+            int[] arraytask5 = new int[5] { 1, 2, 6, 7, 9 };
+            System.Console.WriteLine(MetodReturnIndex(arraytask5));
+        }
+        static (int, int) MetodReturnIndex(int[] array)
+        {
+            int maxnumberindex = 0;
+            int minnumberindex = 0;
+            int maxnumber = array[0];
+            int minnumber = array[0];
+            for (int i = 1; i < array.Length; i++)
+            {
+                if (array[i] <= minnumber)
+                {
+                    minnumberindex = i;
+                }
+                if (array[i] >= maxnumber)
+                {
+                    maxnumberindex = i;
+                }
+            }
+            return (maxnumberindex, minnumberindex);
+        }
+        #endregion
     }
 }
 
