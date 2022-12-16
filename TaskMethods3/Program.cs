@@ -173,6 +173,36 @@ namespace MyApp // Note: actual namespace depends on the project name.
             }
         }
         #endregion
+                //         Дано натуральное число больше 1 (вводится с клавиатуры). Выведите «Точная
+        // степень двойки», если число является точной степенью двойки, или «Не
+        // являеться степенью двойки», в противном случае используя рекурсию
+        // #region Task4
+        // //     Дано натуральное число больше 1 (вводится с клавиатуры). Выведите «Точная
+        // // степень двойки», если число является точной степенью двойки, или «Не
+        // // являеться степенью двойки», в противном случае используя рекурсию.
+        // static void Task4()
+        // {
+        //     System.Console.WriteLine("Task4");
+        //     double number = double.Parse(Console.ReadLine());
+        //     System.Console.WriteLine(Degree2(ref number));
+        // }
+        // static double Degree2(ref double number)
+        // {
+        //     do
+        //     {
+        //         number = number / 2;
+        //         if (number == 1)
+        //         {
+        //             System.Console.WriteLine("«degree 2»");
+        //             return 1;
+        //         }
+        //         return Degree2(ref number);
+        //     }
+        //     while (number == 1 || number < 2 && number > 1);
+        //     return -1;
+        // }
+        // #endregion
+        
     }
 }
 
