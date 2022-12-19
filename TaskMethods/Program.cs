@@ -73,7 +73,8 @@
     }
     static string ConverterString(string line)
     {
-        string[] array1 = line.Split(' ');
+        
+        string[] array1 = line.Split(' ');     // стоит убрать лишние пробелы,иначе "Index was outside the bounds of the array." "введи слово привет,поставь пробел и потом ентер"
         for (int i = 0; i < array1.Length; i++)
         {
             string text = array1[i];
@@ -93,21 +94,39 @@
     {
         System.Console.WriteLine("Task3");
         string[] text = { "by", "belarus", "de", "ru", "germany" };
-        Console.WriteLine(string.Join(",", MethodReplace(text)));
-    }
+        Console.WriteLine(string.Join(",", MethodReplace(text))); //by,de,ru,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+    }                                                             // выводит такое сообщение) 
     static string[] MethodReplace(string[] text)
     {
-        string[] result = new string[100];
-        int i = 0;
+      //  string[] result = new string[100];     // я бы указал длинну массива не 100,а [text.Length]  , но все равно проблема с лишними запятыми остается
+      //  int i = 0;
+       // foreach (string item in text)
+       // {
+       //     if (item.Length < 3)
+       / /    {
+          //      result[i] += item;
+          //      i++;
+          //  }
+      //  }
+        return result;
+        
+        // а вообще я бы сделал так
+        
+         string timeText="";
+                int i = 0;
         foreach (string item in text)
         {
             if (item.Length < 3)
             {
-                result[i] += item;
+                timeText+=item+",";
                 i++;
             }
         }
+        timeText=timeText.Remove(timeText.Length-1,1);
+        string[] result = timeText.Split(",");
         return result;
+       }
+        
     }
     #endregion
     #region Задача 4
